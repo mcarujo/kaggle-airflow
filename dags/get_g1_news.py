@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 import airflow
 import requests
 from airflow import DAG
-from airflow.operators.dummy_operator import DummyOperator
 from airflow.sensors.http_sensor import HttpSensor
 from airflow.operators.python_operator import PythonOperator
 
@@ -13,11 +12,11 @@ default_args = {
             "owner": "Airflow",
             "start_date": airflow.utils.dates.days_ago(1),
             "depends_on_past": False,
-            "email_on_failure": False,
+            "email_on_failure": True,
             "email_on_retry": False,
             "email": "mamcarujo@gmail.com",
             "retries": 1,
-            "retry_delay": timedelta(minutes=5)
+            "retry_delay": timedelta(minutes=15)
         }
 
 # FUNCTIONS
@@ -28,7 +27,7 @@ def download_g1_webpage():
     file.close()
 
 # DAG
-with DAG('g1_example', start_date=datetime(2016, 1, 1)) as dag:
+with DAG('g1_example', schedule_interval="@daily", default_args=default_args, catchup=False) as dag:
     
     # airflow tasks test g1_example is_g1_available 2021-01-01
     is_g1_available = HttpSensor(
