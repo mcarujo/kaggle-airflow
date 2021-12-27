@@ -14,13 +14,14 @@ services:
                 max-file: "3"
 
     webserver:
-        image: puckel/docker-airflow:1.10.9
+        build: .
         restart: always
         depends_on:
             - postgres
         environment:
             - LOAD_EX=n
             - EXECUTOR=Local
+            - OUTPUTS=/usr/local/airflow/outputs
         logging:
             options:
                 max-size: 10m
@@ -28,10 +29,12 @@ services:
         volumes:
             - ./dags:/usr/local/airflow/dags
             - ./logs:/usr/local/airflow/logs
+            - ./outputs:/usr/local/airflow/outputs
             - ./airflow.cfg:/usr/local/airflow/airflow.cfg
         ports:
             - "8080:8080"
-        command: webserver
+        command: 
+            - webserver
         healthcheck:
             test:
                 [
