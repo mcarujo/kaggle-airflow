@@ -6,6 +6,8 @@ services:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
+        volumes:
+          - ./pgdata:/var/lib/postgresql/data
         logging:
             options:
                 max-size: 10m
@@ -25,6 +27,7 @@ services:
                 max-file: "3"
         volumes:
             - ./dags:/usr/local/airflow/dags
+            - ./logs:/usr/local/airflow/logs
             - ./airflow.cfg:/usr/local/airflow/airflow.cfg
         ports:
             - "8080:8080"
