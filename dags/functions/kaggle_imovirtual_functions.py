@@ -101,8 +101,10 @@ def get_number_of_pages(soup):
 
 
 def get_html(region, page, kind="arrendar", movel="apartamento"):
+    space = " "
+    ifen = "-"
     r = requests.get(
-        f"https://www.imovirtual.com/{kind}/{movel}/?search%5Bregion_id%5D={region}&nrAdsPerPage=72&page={page}"
+        f"https://www.imovirtual.com/{movel}/{kind}/{region[0].lower().replace(space,ifen)}/?search%5Bregion_id%5D={region[1]}&nrAdsPerPage=72&page={page}"
     )
     return BeautifulSoup(r.text)
 
@@ -111,11 +113,11 @@ def extract_by_type(kind, movel):
     aux = []
     regions = get_regions()
     for region in regions:
-        max_pages = get_number_of_pages(get_html(region[1], 1, kind, movel))
+        max_pages = get_number_of_pages(get_html(region, 1, kind, movel))
         print(region[0], max_pages)
 
         for page in range(1, max_pages + 1):
-            html = get_html(region[1], page, kind, movel)
+            html = get_html(region, page, kind, movel)
             aux.append(pd.DataFrame(get_info_from_page(html)))
 
     dataset = pd.concat(aux)
@@ -131,7 +133,6 @@ def download_process_store():
     final = []
     for x in ["moradia", "apartamento"]:
         for y in ["arrendar", "comprar", "ferias"]:
-            print(x, y)
             final.append(extract_by_type(x, y))
 
     pd.concat([final], axis=1).to_csv(
