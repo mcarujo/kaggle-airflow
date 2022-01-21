@@ -138,6 +138,3 @@ def download_process_store():
     pd.concat([final], axis=1).to_csv(
         os.path.join(os.getenv("OUTPUTS"), "portugal_ads_proprieties.csv"), index=False
     )
-
-
-download_process_store()
