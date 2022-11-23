@@ -1,59 +1,54 @@
 local,rooms,price,area,restroom,status,kind,movel
+" Canelas e Fermelã, Estarreja, Aveiro",T3,950,224,3,Usado,moradia,arrendar
+" Glória e Vera Cruz, Aveiro",T3,750,122,2,Renovado,moradia,arrendar
+" Maceda, Ovar, Aveiro",T3,700,158,3,Novo,moradia,arrendar
 " Gafanha da Nazaré, Ílhavo, Aveiro",T4,1100,180,3,Usado,moradia,arrendar
+" Vagos e Santo António, Vagos, Aveiro",T3,800,170,3,Novo,moradia,arrendar
+" Sangalhos, Anadia, Aveiro",T4,500,150,2,Usado,moradia,arrendar
+" Sangalhos, Anadia, Aveiro",T4,700,167,2,Usado,moradia,arrendar
+" Barrô e Aguada de Baixo, Águeda, Aveiro",T5,1200,150,,"
+
+",moradia,arrendar
+" Fermedo, Arouca, Aveiro",T2,350,60,1,Usado,moradia,arrendar
+" S. João da Madeira, São João da Madeira, Aveiro",T5,1300,500,3,Usado,moradia,arrendar
+" Sangalhos, Anadia, Aveiro",T4,500,150,2,Usado,moradia,arrendar
 " Fornos, Santa Maria da Feira, Aveiro",T3,895,200,3,"
                                             Anúncio particular                                    ",moradia,arrendar
 " Ovar, São João, Arada e São Vicente de Pereira Jusã, Ovar, Aveiro",T5,700,275,3,Renovado,moradia,arrendar
 " São Pedro de Castelões, Vale de Cambra, Aveiro",T5,1750,130,4,Novo,moradia,arrendar
 " São Jacinto, Aveiro",T5,1250,257,4,Usado,moradia,arrendar
-" Oliveira do Bairro, Aveiro",T0,370,30,1,Novo,moradia,arrendar
-" Eixo e Eirol, Aveiro",T3,900,69,2,Renovado,moradia,arrendar
-" Gafanha da Nazaré, Ílhavo, Aveiro",T2,350,60,,"
-
-",moradia,arrendar
-" Escariz, Arouca, Aveiro",T2,350,60,1,Usado,moradia,arrendar
-" Ílhavo (São Salvador), Ílhavo, Aveiro",T3,550,100,,"
-
-",moradia,arrendar
 " Caldas de São Jorge e Pigeiros, Santa Maria da Feira, Aveiro",T3,,90,2,"
 ",moradia,arrendar
-" Calvão, Vagos, Aveiro",T3,480,138,2,Renovado,moradia,arrendar
-" Arouca e Burgo, Arouca, Aveiro",T4,525,250,3,Usado,moradia,arrendar
-" Canelas e Fermelã, Estarreja, Aveiro",T1,350,50,1,Renovado,moradia,arrendar
-" Canedo, Vale e Vila Maior, Santa Maria da Feira, Aveiro",T1,350,55,1,Usado,moradia,arrendar
-" Oliveira de Azeméis, Santiago de Riba-Ul, Ul, Macinhata da Seixa e Madail, Oliveira de Azeméis, Aveiro",T1,400,45,1,Renovado,moradia,arrendar
+" Glória e Vera Cruz, Aveiro",T3,875,120,2,Novo,moradia,arrendar
+" Pessegueiro do Vouga, Sever do Vouga, Aveiro",T1,295,66,1,Novo,moradia,arrendar
 " Santa Maria da Feira, Travanca, Sanfins e Espargo, Santa Maria da Feira, Aveiro",T5,800,220,2,Usado,moradia,arrendar
-" Gafanha da Boa Hora, Vagos, Aveiro",T2,430,90,1,Usado,moradia,arrendar
-" Santa Maria da Feira, Travanca, Sanfins e Espargo, Santa Maria da Feira, Aveiro",T2,550,95,,"
-
-",moradia,arrendar
-" Vila Nova de São Bento e Vale de Vargo, Serpa, Beja",T1,320,32,,"
-
-",moradia,arrendar
-" Cabeça Gorda, Beja",T3,500,82,1,Renovado,moradia,arrendar
+" São Roque, Oliveira de Azeméis, Aveiro",T1,270,55,1,Renovado,moradia,arrendar
+" São Luís, Odemira, Beja",T4,1000,"76,38",2,"
+                                                                                                        RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
+" Mértola, Beja",T1,350,38,1,Renovado,moradia,arrendar
 " São Teotónio, Odemira, Beja",T1,35,35,1,Novo,moradia,arrendar
-" Cabeça Gorda, Beja",T2,400,103,1,"
+" Rosário, Almodôvar, Beja",T1,550,90,,"
 
 ",moradia,arrendar
-" Mértola, Beja",T3,550,120,1,Usado,moradia,arrendar
-" Fermentões, Guimarães, Braga",T10 ou superior,3500,842,4,"
+" Moura (Santo Agostinho e São João Baptista) e Santo Amador, Moura, Beja",T3,500,90,,"
 
 ",moradia,arrendar
+" Nossa Senhora do Amparo, Póvoa de Lanhoso, Braga",T3,900,170,3,Usado,moradia,arrendar
 " Nogueira, Fraião e Lamaçães, Braga",T3,1600,173,4,Usado,moradia,arrendar
-" Gemeses, Esposende, Braga",T3,1600,175,3,Usado,moradia,arrendar
-" Braga (São José de São Lázaro e São João do Souto), Braga",T5,1800,250,3,Usado,moradia,arrendar
+" Esposende, Marinhas e Gandra, Esposende, Braga",T3,1100,164,2,Usado,moradia,arrendar
+" Real, Dume e Semelhe, Braga",T4,1250,276,4,Renovado,moradia,arrendar
+" Gamil e Midões, Barcelos, Braga",T3,980,200,3,,moradia,arrendar
 " Fermentões, Guimarães, Braga",T4,750,160,2,Usado,moradia,arrendar
 " Caldas de Vizela (São Miguel e São João), Vizela, Braga",T4,3200,1118,4,Usado,moradia,arrendar
 " São Torcato, Guimarães, Braga",T6,2000,405,,"
 
 ",moradia,arrendar
+" Ferreiros e Gondizalves, Braga",T3,1250,"219,40",2,Usado,moradia,arrendar
+" Negreiros e Chavão, Barcelos, Braga",T3,1500,380,3,Usado,moradia,arrendar
 " Ponte, Guimarães, Braga",T4,2000,400,4,Usado,moradia,arrendar
-" Braga (São José de São Lázaro e São João do Souto), Braga",T5,1800,250,3,Usado,moradia,arrendar
 " Gavião, Vila Nova de Famalicão, Braga",T5,2750,370,4,Usado,moradia,arrendar
-" Braga (São José de São Lázaro e São João do Souto), Braga",T4,1800,260,3,"
-
-",moradia,arrendar
+" Sequeira, Braga",T4,1000,273,4,Usado,moradia,arrendar
 " Fermentões, Guimarães, Braga",T1,550,113,1,Usado,moradia,arrendar
-" Caires, Amares, Braga",T4,750,270,3,Usado,moradia,arrendar
 " Braga (São José de São Lázaro e São João do Souto), Braga",T5,1800,250,2,"
 
 ",moradia,arrendar
@@ -63,18 +58,18 @@ local,rooms,price,area,restroom,status,kind,movel
 " Braga (Maximinos, Sé e Cividade), Braga",T4,890,154,2,Usado,moradia,arrendar
 " São Victor, Braga",T2,820,"110,50",3,Usado,moradia,arrendar
 " Braga (Maximinos, Sé e Cividade), Braga",T4,1700,"255,20",2,Usado,moradia,arrendar
-" Esporões, Braga",T3,600,136,2,"
-                                                                                                        RE/MAX Grupo Satisfactor                                                                                        ",moradia,arrendar
 " Airão Santa Maria, Airão São João e Vermil, Guimarães, Braga",T4,3500,325,4,"
 
 ",moradia,arrendar
 " Ruílhe, Braga",T2,700,110,2,Usado,moradia,arrendar
 " Antas e Abade de Vermoim, Vila Nova de Famalicão, Braga",T3,1500,180,3,Usado,moradia,arrendar
-" Azurém, Guimarães, Braga",T2,550,100,2,Usado,moradia,arrendar
 " Parada de Gatim, Vila Verde, Braga",T3,1400,600,4,"
 
 ",moradia,arrendar
-" Celeirós, Aveleda e Vimieiro, Braga",T3,2400,300,,,moradia,arrendar
+" São Gens, Fafe, Braga",T3,650,175,,,moradia,arrendar
+" Fermentões, Guimarães, Braga",T10 ou superior,3500,842,4,"
+
+",moradia,arrendar
 " Rio Covo (Santa Eugénia), Barcelos, Braga",T4,850,150,3,Novo,moradia,arrendar
 " Vale (São Cosme), Telhado e Portela, Vila Nova de Famalicão, Braga",T2,450,80,,"
 
@@ -82,284 +77,321 @@ local,rooms,price,area,restroom,status,kind,movel
 " Costa, Guimarães, Braga",T2,650,75,1,Renovado,moradia,arrendar
 " Nogueira, Fraião e Lamaçães, Braga",T4,750,172,2,Usado,moradia,arrendar
 " Serzedelo, Guimarães, Braga",T3,3500,153,,,moradia,arrendar
+" Esposende, Marinhas e Gandra, Esposende, Braga",T5,700,140,,,moradia,arrendar
 " Arcozelo, Barcelos, Braga",T3,,"310,50",2,Para recuperar,moradia,arrendar
 " Vila Cova e Feitos, Barcelos, Braga",T3,425,130,1,Usado,moradia,arrendar
 " Esposende, Marinhas e Gandra, Esposende, Braga",T3,999,110,3,"
 ",moradia,arrendar
-" Fiscal, Amares, Braga",T2,550,100,2,Renovado,moradia,arrendar
+" Vila Verde e Barbudo, Vila Verde, Braga",T3,899,270,,,moradia,arrendar
 " Arnoso (Santa Maria e Santa Eulália) e Sezures, Vila Nova de Famalicão, Braga",T2,500,1,1,Novo,moradia,arrendar
-" Barcelos, Vila Boa e Vila Frescainha (São Martinho e São Pedro), Barcelos, Braga",T2,400,60,1,Renovado,moradia,arrendar
-" Vila de Prado, Vila Verde, Braga",T4,650,272,3,Usado,moradia,arrendar
+" Cervães, Vila Verde, Braga",T2,435,62,1,"
+
+",moradia,arrendar
 " Arnoia, Celorico de Basto, Braga",T2,840,200,,"
 
 ",moradia,arrendar
+" Vila de Prado, Vila Verde, Braga",T4,650,272,3,Usado,moradia,arrendar
 " Oliveira, São Paio e São Sebastião, Guimarães, Braga",T4,1000,200,2,Usado,moradia,arrendar
-" São Victor, Braga",T3,800,150,2,"
-                                                                                                        RE/MAX Grupo Satisfactor                                                                                        ",moradia,arrendar
+" Braga (Maximinos, Sé e Cividade), Braga",T3,1500,221,2,Renovado,moradia,arrendar
 " Loureira, Vila Verde, Braga",T2,750,"106,10",,,moradia,arrendar
-" Forjães, Esposende, Braga",T2,220,50,2,Usado,moradia,arrendar
-" Vale (São Cosme), Telhado e Portela, Vila Nova de Famalicão, Braga",T3,800,300,1,"
+" Refojos de Basto, Outeiro e Painzela, Cabeceiras de Basto, Braga",T2,300,140,1,Renovado,moradia,arrendar
+" Silveiros e Rio Covo (Santa Eulália), Barcelos, Braga",T2,400,60,1,Usado,moradia,arrendar
+" Águas Santas e Moure, Póvoa de Lanhoso, Braga",T5,500,125,,"
 
 ",moradia,arrendar
-" Silveiros e Rio Covo (Santa Eulália), Barcelos, Braga",T2,400,60,1,Usado,moradia,arrendar
+" Mesão Frio, Guimarães, Braga",T1,250,45,1,Usado,moradia,arrendar
 " Covilhã e Canhoso, Covilhã, Castelo Branco",T3,775,127,3,"
 
 ",moradia,arrendar
-" Tinalhas, Castelo Branco",T2,350,65,,"
+" Almaceda, Castelo Branco",T1,300,50,,"
 
 ",moradia,arrendar
-" Cambas, Oleiros, Castelo Branco",T1,590,60,1,Renovado,moradia,arrendar
+" Cambas, Oleiros, Castelo Branco",T1,600,68,1,Renovado,moradia,arrendar
 " Estreito-Vilar Barroco, Oleiros, Castelo Branco",T2,300,50,1,"
 
 ",moradia,arrendar
+" Fundão, Valverde, Donas, Aldeia de Joanes e Aldeia Nova do Cabo, Fundão, Castelo Branco",T3,500,137,2,Usado,moradia,arrendar
 " Estreito-Vilar Barroco, Oleiros, Castelo Branco",T1,185,25,1,"
 
 ",moradia,arrendar
-" Tortosendo, Covilhã, Castelo Branco",T2,350,110,1,Renovado,moradia,arrendar
-" Buarcos e São Julião, Figueira da Foz, Coimbra",T5,800,210,3,Renovado,moradia,arrendar
-" Carapinheira, Montemor-o-Velho, Coimbra",T1,600,70,,Casas de Banho: 1,moradia,arrendar
+" Tavarede, Figueira da Foz, Coimbra",T3,550,141,2,"
+
+",moradia,arrendar
 " Cepos e Teixeira, Arganil, Coimbra",T2,550,65,2,"
 
 ",moradia,arrendar
+" Maiorca, Figueira da Foz, Coimbra",T2,350,80,,"
+
+",moradia,arrendar
+" Santo António dos Olivais, Coimbra",T3,650,70,1,Renovado,moradia,arrendar
 " Buarcos e São Julião, Figueira da Foz, Coimbra",T3,1000,290,2,Usado,moradia,arrendar
-" Souselas e Botão, Coimbra",T2,630,140,1,Renovado,moradia,arrendar
 " Cepos e Teixeira, Arganil, Coimbra",T5,600,100,1,Usado,moradia,arrendar
-" Souselas e Botão, Coimbra",T2,630,100,1,Usado,moradia,arrendar
 " Arganil, Coimbra",T3,350,115,2,Usado,moradia,arrendar
 " Taveiro, Ameal e Arzila, Coimbra",T2,600,100,2,Usado,moradia,arrendar
 " Buarcos e São Julião, Figueira da Foz, Coimbra",T2,330,32,1,Usado,moradia,arrendar
-" Souselas e Botão, Coimbra",T2,630,55,,"
+" São Martinho do Bispo e Ribeira de Frades, Coimbra",T3,550,200,3,Usado,moradia,arrendar
+" Buarcos e São Julião, Figueira da Foz, Coimbra",T1,350,60,1,Usado,moradia,arrendar
+" Souselas e Botão, Coimbra",T2,600,140,1,Renovado,moradia,arrendar
+" Mourão, Évora",T2,430,84,1,"
 
 ",moradia,arrendar
-" Souselas e Botão, Coimbra",T2,600,140,1,Renovado,moradia,arrendar
-" Malagueira e Horta das Figueiras, Évora",T3,1000,"96,16",2,Usado,moradia,arrendar
 " Évora (São Mamede, Sé, São Pedro e Santo Antão), Évora",T3,1150,137,2,Renovado,moradia,arrendar
-" Évora (São Mamede, Sé, São Pedro e Santo Antão), Évora",T1,650,63,1,Usado,moradia,arrendar
 " Bacelo e Senhora da Saúde, Évora",T3,1250,"88,48",1,Novo,moradia,arrendar
-" Nossa Senhora da Vila, Nossa Senhora do Bispo e Silveiras, Montemor-o-Novo, Évora",T3,800,120,2,Renovado,moradia,arrendar
+" Redondo, Évora",T2,400,80,,"
+
+",moradia,arrendar
+" Nossa Senhora da Vila, Nossa Senhora do Bispo e Silveiras, Montemor-o-Novo, Évora",T3,800,200,2,Renovado,moradia,arrendar
+" Malagueira e Horta das Figueiras, Évora",T1,350,60,1,Renovado,moradia,arrendar
 " Redondo, Évora",T1,400,60,1,Renovado,moradia,arrendar
-" Évora (São Mamede, Sé, São Pedro e Santo Antão), Évora",T1,550,48,1,Renovado,moradia,arrendar
-" Évora (São Mamede, Sé, São Pedro e Santo Antão), Évora",T1,525,75,1,Renovado,moradia,arrendar
 " Reguengos de Monsaraz, Évora",T3,300,160,3,Usado,moradia,arrendar
-" Luz de Tavira e Santo Estêvão, Tavira, Faro",T2,500,112,1,Renovado,moradia,arrendar
 " Mexilhoeira Grande, Portimão, Faro",T3,2500,156,2,Novo,moradia,arrendar
+" Tavira (Santa Maria e Santiago), Tavira, Faro",T2,1150,"144,48",3,"
+                                                                                                        Maxgroup                                                                                        ",moradia,arrendar
 " Quarteira, Loulé, Faro",T4,1750,200,3,Usado,moradia,arrendar
-" Albufeira e Olhos de Água, Albufeira, Faro",T3,1300,110,3,Usado,moradia,arrendar
+" Alcantarilha e Pêra, Silves, Faro",T4,1850,169,3,"
+                                                                                                        Expogroup Algarve                                                                                        ",moradia,arrendar
 " Alvor, Portimão, Faro",T0,3000,515,4,"
                                                                                                         Expogroup Algarve                                                                                        ",moradia,arrendar
-" Albufeira e Olhos de Água, Albufeira, Faro",T3,1450,"153,40",4,Novo,moradia,arrendar
-" Conceição e Cabanas de Tavira, Tavira, Faro",T3,2500,"164,90",4,Usado,moradia,arrendar
 " Quarteira, Loulé, Faro",T3,1500,183,4,"
 
 ",moradia,arrendar
-" Quarteira, Loulé, Faro",T3,2500,97,4,Usado,moradia,arrendar
-" Santa Bárbara de Nexe, Faro",T3,1000,130,2,Renovado,moradia,arrendar
-" São Clemente, Loulé, Faro",T3,475,419,2,"
+" Portimão, Faro",T2,900,"123,40",3,Renovado,moradia,arrendar
+" Quarteira, Loulé, Faro",T3,475,419,2,"
                                                                                                         REMAX LOULÉ                                                                                        ",moradia,arrendar
-" Altura, Castro Marim, Faro",T3,1000,137,3,,moradia,arrendar
-" Alcantarilha e Pêra, Silves, Faro",T2,900,"90,40",2,Em construção,moradia,arrendar
-" Albufeira e Olhos de Água, Albufeira, Faro",T4,3500,219,4,Usado,moradia,arrendar
-" Alcantarilha e Pêra, Silves, Faro",T2,1100,"113,20",2,Em construção,moradia,arrendar
 " Guia, Albufeira, Faro",T3,630,142,2,"
                                                                                                         REMAX LOULÉ                                                                                        ",moradia,arrendar
 " Guia, Albufeira, Faro",T4,995,200,2,"
                                                                                                         REMAX LOULÉ                                                                                        ",moradia,arrendar
-" Guia, Albufeira, Faro",T4,1580,200,2,"
+" Alcantarilha e Pêra, Silves, Faro",T2,900,"90,40",2,Em construção,moradia,arrendar
+" Albufeira e Olhos de Água, Albufeira, Faro",T4,3500,219,4,Usado,moradia,arrendar
+" Altura, Castro Marim, Faro",T3,650,138,2,"
                                                                                                         REMAX LOULÉ                                                                                        ",moradia,arrendar
+" Almancil, Loulé, Faro",T4,3500,220,4,"
+
+",moradia,arrendar
 " Tavira (Santa Maria e Santiago), Tavira, Faro",T1,500,"52,20",1,Usado,moradia,arrendar
 " Tavira (Santa Maria e Santiago), Tavira, Faro",T1,500,"52,20",1,Usado,moradia,arrendar
-" Armação de Pêra, Silves, Faro",T3,1700,"157,10",3,"
-                                                                                                        Expogroup Algarve                                                                                        ",moradia,arrendar
+" Conceição e Cabanas de Tavira, Tavira, Faro",T3,2500,"164,90",4,Usado,moradia,arrendar
 " Conceição e Cabanas de Tavira, Tavira, Faro",T3,2000,"164,90",4,Usado,moradia,arrendar
-" Olhão, Faro",T4,1200,306,2,Usado,moradia,arrendar
 " Montenegro, Faro",T3,1900,265,,,moradia,arrendar
 " Conceição e Cabanas de Tavira, Tavira, Faro",T3,2000,"164,90",3,Usado,moradia,arrendar
-" Faro (Sé e São Pedro), Faro",T1,650,51,1,Usado,moradia,arrendar
 " Azinhal, Castro Marim, Faro",T1,500,33,1,Novo,moradia,arrendar
 " Faro (Sé e São Pedro), Faro",T3,1150,"79,85",2,Usado,moradia,arrendar
 " Vila Nova de Cacela, Vila Real de Santo António, Faro",T2,850,"77,35",2,Usado,moradia,arrendar
 " Moncarapacho e Fuseta, Olhão, Faro",T4,1800,154,3,Novo,moradia,arrendar
 " São Sebastião, Loulé, Faro",T4,3000,196,4,Renovado,moradia,arrendar
-" Quarteira, Loulé, Faro",T3,1330,419,2,"
-                                                                                                        REMAX LOULÉ                                                                                        ",moradia,arrendar
-" Altura, Castro Marim, Faro",T3,650,138,2,"
-                                                                                                        REMAX LOULÉ                                                                                        ",moradia,arrendar
+" São Bartolomeu de Messines, Silves, Faro",T3,1100,150,,,moradia,arrendar
 " Portimão, Faro",T4,3500,230,4,"
                                                                                                         Expogroup Algarve                                                                                        ",moradia,arrendar
 " Almancil, Loulé, Faro",T4,3800,"174,63",3,Usado,moradia,arrendar
-" São Bartolomeu de Messines, Silves, Faro",T3,1100,150,,,moradia,arrendar
-" Luz, Lagos, Faro",T3,3750,"321,90",3,Usado,moradia,arrendar
 " Quarteira, Loulé, Faro",T3,1900,150,3,Usado,moradia,arrendar
 " Vila Nova de Cacela, Vila Real de Santo António, Faro",T3,850,152,3,Usado,moradia,arrendar
+" Santa Luzia, Tavira, Faro",T2,1000,102,2,"
+
+",moradia,arrendar
+" Luz, Lagos, Faro",T9,3750,357,,"
+
+",moradia,arrendar
 " Altura, Castro Marim, Faro",T5,3000,300,3,Usado,moradia,arrendar
-" São Gonçalo de Lagos, Lagos, Faro",T4,2200,240,3,Usado,moradia,arrendar
-" Castro Marim, Faro",T3,800,120,1,Renovado,moradia,arrendar
-" Ferreiras, Albufeira, Faro",T3,1650,152,3,Usado,moradia,arrendar
+" Armação de Pêra, Silves, Faro",T3,1700,"157,10",3,"
+                                                                                                        Expogroup Algarve                                                                                        ",moradia,arrendar
 " Mexilhoeira Grande, Portimão, Faro",T3,2500,142,3,Usado,moradia,arrendar
+" Guia, Albufeira, Faro",T4,1580,200,2,"
+                                                                                                        REMAX LOULÉ                                                                                        ",moradia,arrendar
 " Quarteira, Loulé, Faro",T3,950,109,2,"
                                                                                                         REMAX LOULÉ                                                                                        ",moradia,arrendar
 " Vila Real de Santo António, Faro",T2,450,49,,,moradia,arrendar
 " Quarteira, Loulé, Faro",T2,1000,62,1,"
 
 ",moradia,arrendar
-" Quarteira, Loulé, Faro",T2,1000,62,1,"
-
-",moradia,arrendar
-" Luz, Lagos, Faro",T2,1500,90,1,Usado,moradia,arrendar
+" Quarteira, Loulé, Faro",T2,1200,90,2,Usado,moradia,arrendar
 " Altura, Castro Marim, Faro",T4,3000,500,4,Usado,moradia,arrendar
+" Portimão, Faro",T4,1800,200,4,Usado,moradia,arrendar
+" Silves, Faro",T3,1250,122,2,Usado,moradia,arrendar
+" Mexilhoeira Grande, Portimão, Faro",T2,900,85,,,moradia,arrendar
 " Portimão, Faro",T1,450,50,1,Renovado,moradia,arrendar
 " Vila Nova de Cacela, Vila Real de Santo António, Faro",T4,800,"96,08",,,moradia,arrendar
+" Alte, Loulé, Faro",T1,370,40,1,Usado,moradia,arrendar
 " Portimão, Faro",T2,950,73,2,"
 
 ",moradia,arrendar
-" Altura, Castro Marim, Faro",T3,1000,170,2,Usado,moradia,arrendar
+" Almancil, Loulé, Faro",T4,3250,"235,17",4,Usado,moradia,arrendar
 " Vila Nova de Cacela, Vila Real de Santo António, Faro",T4,2000,120,3,Usado,moradia,arrendar
-" Silves, Faro",T2,650,90,,,moradia,arrendar
-" Conceição e Cabanas de Tavira, Tavira, Faro",T3,790,110,2,"
+" Quarteira, Loulé, Faro",T2,1000,62,1,"
 
 ",moradia,arrendar
+" Silves, Faro",T2,650,90,,,moradia,arrendar
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,800,90,1,Renovado,moradia,arrendar
 " Faro (Sé e São Pedro), Faro",T2,1250,120,2,Novo,moradia,arrendar
-" Luz de Tavira e Santo Estêvão, Tavira, Faro",T2,750,100,1,Renovado,moradia,arrendar
-" Portimão, Faro",T3,1850,185,4,Novo,moradia,arrendar
-" Olhão, Faro",T1,600,65,,Casas de Banho: 1,moradia,arrendar
-" Boliqueime, Loulé, Faro",T2,550,120,,Casas de Banho: 1,moradia,arrendar
-" Luz de Tavira e Santo Estêvão, Tavira, Faro",T1,500,44,1,Usado,moradia,arrendar
+" Conceição e Estoi, Faro",T2,1200,180,,"
+
+",moradia,arrendar
+" Albufeira e Olhos de Água, Albufeira, Faro",T0,200,18,,"
+",moradia,arrendar
 " Altura, Castro Marim, Faro",T2,695,99,1,Renovado,moradia,arrendar
 " Santa Bárbara de Nexe, Faro",T7,8500,339,,,moradia,arrendar
-" Barão de São Miguel, Vila do Bispo, Faro",T10 ou superior,3000,500,4,Renovado,moradia,arrendar
 " Luz de Tavira e Santo Estêvão, Tavira, Faro",T2,800,80,2,Renovado,moradia,arrendar
-" Algoz e Tunes, Silves, Faro",T1,460,65,1,"
-
-",moradia,arrendar
-" Olhão, Faro",T2,650,77,,"
-
-",moradia,arrendar
 " Quarteira, Loulé, Faro",T7,5500,500,4,Usado,moradia,arrendar
-" Olhão, Faro",T3,650,120,2,Renovado,moradia,arrendar
-" Querença, Tôr e Benafim, Loulé, Faro",T4,1000,200,3,Usado,moradia,arrendar
+" Estômbar e Parchal, Lagoa (Algarve), Faro",T1,300,25,,"
+                                            Anúncio particular                                    ",moradia,arrendar
+" São Gonçalo de Lagos, Lagos, Faro",T2,1000,96,1,Usado,moradia,arrendar
 " Santa Bárbara de Nexe, Faro",T4,6500,640,,,moradia,arrendar
-" Conceição e Estoi, Faro",T3,750,109,,"
-
-",moradia,arrendar
 " Sabugueiro, Seia, Guarda",T4,700,126,3,"
                                                                                                         Remax Market - Grupo Summit                                                                                        ",moradia,arrendar
  Guarda,T5,1200,202,3,Usado,moradia,arrendar
-" Sabugal e Aldeia de Santo António, Sabugal, Guarda",T3,350,120,1,Usado,moradia,arrendar
 " Gouveia (São Pedro e São Julião), Gouveia, Guarda",T1,280,50,1,"
 
 ",moradia,arrendar
 " Celorico (São Pedro e Santa Maria) e Vila Boa do Mondego, Celorico da Beira, Guarda",T9,950,330,,"
 
 ",moradia,arrendar
-" Açores e Velosa, Celorico da Beira, Guarda",T1,290,35,1,Novo,moradia,arrendar
+" Seia, São Romão e Lapa dos Dinheiros, Seia, Guarda",T3,600,120,2,Usado,moradia,arrendar
+" Santa Maria Maior, Funchal, Ilha da Madeira",T3,950,120,2,"
+
+",moradia,arrendar
+" São Roque, Funchal, Ilha da Madeira",T3,1000,108,2,Usado,moradia,arrendar
 " Porto da Cruz, Machico, Ilha da Madeira",T1,600,90,1,"
 
 ",moradia,arrendar
-" São Martinho, Funchal, Ilha da Madeira",T2,930,120,1,Usado,moradia,arrendar
+" Santa Luzia, Funchal, Ilha da Madeira",T2,550,85,1,Usado,moradia,arrendar
 " Santana, Ilha da Madeira",T1,400,60,1,Usado,moradia,arrendar
 " Santa Maria Maior, Funchal, Ilha da Madeira",T1,700,40,1,Usado,moradia,arrendar
 " Santa Maria Maior, Funchal, Ilha da Madeira",T4,,409,4,"
 
 ",moradia,arrendar
+" São Martinho, Funchal, Ilha da Madeira",T2,930,120,1,Usado,moradia,arrendar
 " São Pedro, Ponta Delgada, Ilha de São Miguel",T6,1250,372,4,Usado,moradia,arrendar
 " Ponta Delgada (São Sebastião), Ponta Delgada, Ilha de São Miguel",T0,9000,1360,,"
 
 ",moradia,arrendar
 " Ponta Delgada (São Sebastião), Ponta Delgada, Ilha de São Miguel",T2,650,77,1,"
                                                                                                         António Vasconcelos Tavares - Mediação Imobiliária, Lda.                                                                                        ",moradia,arrendar
+" Ponta Delgada (São Sebastião), Ponta Delgada, Ilha de São Miguel",T6,1500,350,,"
+
+",moradia,arrendar
+" São Mateus, Madalena, Ilha do Pico",T2,750,160,,"
+
+",moradia,arrendar
 " Arrabal, Leiria",T5,2500,290,4,Novo,moradia,arrendar
 " Vau, Óbidos, Leiria",T4,950,"158,59",2,Usado,moradia,arrendar
-" Foz do Arelho, Caldas da Rainha, Leiria",T6,1800,250,3,Renovado,moradia,arrendar
 " Usseira, Óbidos, Leiria",T3,550,120,3,Renovado,moradia,arrendar
-" Marrazes e Barosa, Leiria",T4,600,102,4,"
+" Cela, Alcobaça, Leiria",T6,890,340,4,Usado,moradia,arrendar
+" Maceira, Leiria",T8,900,120,2,"
+
+",moradia,arrendar
+" Castanheira de Pêra e Coentral, Castanheira de Pêra, Leiria",T4,2000,150,2,"
 
 ",moradia,arrendar
 " Alvados e Alcaria, Porto de Mós, Leiria",T2,650,77,1,"
 
 ",moradia,arrendar
-" Cela, Alcobaça, Leiria",T6,890,340,4,Usado,moradia,arrendar
 " Almagreira, Pombal, Leiria",T3,1200,166,,,moradia,arrendar
+" Leiria, Pousos, Barreira e Cortes, Leiria",T3,850,144,2,Renovado,moradia,arrendar
 " Nadadouro, Caldas da Rainha, Leiria",T3,950,150,2,Usado,moradia,arrendar
-" Caldas da Rainha - Santo Onofre e Serra do Bouro, Caldas da Rainha, Leiria",T3,650,119,1,"
-                                                                                                        RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
+" Caldas da Rainha - Nossa Senhora do Pópulo, Coto e São Gregório, Caldas da Rainha, Leiria",T2,650,"45,60",1,Renovado,moradia,arrendar
+" Marrazes e Barosa, Leiria",T2,500,127,1,"
+
+",moradia,arrendar
+" Leiria, Pousos, Barreira e Cortes, Leiria",T3,480,70,1,Usado,moradia,arrendar
+" Ferrel, Peniche, Leiria",T4,800,180,2,Usado,moradia,arrendar
 " Milagres, Leiria",T3,800,500,3,Renovado,moradia,arrendar
-" Tornada e Salir do Porto, Caldas da Rainha, Leiria",T3,900,220,2,Usado,moradia,arrendar
 " Turquel, Alcobaça, Leiria",T3,600,154,,"
 
 ",moradia,arrendar
-" Caranguejeira, Leiria",T3,550,100,,"
-",moradia,arrendar
-" Pombal, Leiria",T3,580,140,2,Usado,moradia,arrendar
-" Santiago da Guarda, Ansião, Leiria",T3,280,70,,,moradia,arrendar
-" Marinha Grande, Leiria",T2,600,100,1,Renovado,moradia,arrendar
-" Agualva e Mira-Sintra, Sintra, Lisboa",T2,750,72,,"
+" São Martinho do Porto, Alcobaça, Leiria",T1,300,70,1,"
 
 ",moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T3,4500,160,2,Usado,moradia,arrendar
+" São Martinho do Porto, Alcobaça, Leiria",T1,375,45,1,Usado,moradia,arrendar
+" A dos Francos, Caldas da Rainha, Leiria",T3,650,100,1,Usado,moradia,arrendar
+" A dos Francos, Caldas da Rainha, Leiria",T3,650,93,1,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T4,3500,"137,32",2,Renovado,moradia,arrendar
+" Ericeira, Mafra, Lisboa",T2,1000,70,1,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T5,3600,258,4,"
+
+",moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T4,1650,150,3,Usado,moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T2,1200,90,2,Usado,moradia,arrendar
+" Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T5,2500,190,4,"
+
+",moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T6,2000,140,3,Usado,moradia,arrendar
+" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T3,4500,"233,34",4,Usado,moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T4,4500,200,4,Usado,moradia,arrendar
 " Barcarena, Oeiras, Lisboa",T3,2750,"219,72",3,Usado,moradia,arrendar
-" Belém, Lisboa",T3,3750,170,2,Usado,moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T4,1950,150,3,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T3,3000,150,2,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T4,10000,450,4,Renovado,moradia,arrendar
-" Rio de Mouro, Sintra, Lisboa",T3,4000,"129,90",4,"
-
-",moradia,arrendar
-" Loures, Lisboa",T3,2200,"169,11",3,Novo,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T5,9000,"532,10",4,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,3000,180,3,Usado,moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T3,3900,250,3,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T6,17500,720,4,Usado,moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T6,1800,120,4,Usado,moradia,arrendar
+" Ericeira, Mafra, Lisboa",T3,1600,112,2,Usado,moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T2,980,80,1,Usado,moradia,arrendar
 " Carcavelos e Parede, Cascais, Lisboa",T5,6500,358,4,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T6,6500,600,4,Renovado,moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T3,4200,200,4,Usado,moradia,arrendar
+" Ericeira, Mafra, Lisboa",T4,1700,"118,47",2,Usado,moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T3,4500,200,4,Usado,moradia,arrendar
 " Barcarena, Oeiras, Lisboa",T3,2750,180,3,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T7,6000,427,,,moradia,arrendar
+" Lumiar, Lisboa",T7,25000,1010,,"
+
+",moradia,arrendar
+" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T5,7000,542,4,Usado,moradia,arrendar
+" Agualva e Mira-Sintra, Sintra, Lisboa",T2,750,72,,"
+
+",moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T6,4500,400,,"
 
 ",moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T5,5000,387,4,"
+" Cascais e Estoril, Cascais, Lisboa",T4,2800,160,3,Usado,moradia,arrendar
+" Porto Salvo, Oeiras, Lisboa",T4,1950,388,4,"
 
 ",moradia,arrendar
-" Ericeira, Mafra, Lisboa",T2,1000,70,1,Usado,moradia,arrendar
+" Ajuda, Lisboa",T3,1650,140,2,Renovado,moradia,arrendar
+" Belém, Lisboa",T3,3750,170,2,Usado,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T3,3900,180,3,Renovado,moradia,arrendar
-" Penha de França, Lisboa",T4,5900,233,4,Renovado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T4,3200,170,2,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T3,3500,137,3,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T5,15000,320,4,Novo,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T3,2700,"208,25",3,Usado,moradia,arrendar
-" Alvalade, Lisboa",T10 ou superior,15000,823,4,Para recuperar,moradia,arrendar
 " Alvalade, Lisboa",T8,25000,400,4,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,2800,160,3,Usado,moradia,arrendar
-" Ericeira, Mafra, Lisboa",T3,1800,"183,52",4,Usado,moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T4,3250,171,,,moradia,arrendar
+" Alvalade, Lisboa",T5,4000,425,4,"
+",moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T3,2200,148,3,Usado,moradia,arrendar
+" Rio de Mouro, Sintra, Lisboa",T3,4000,"129,90",4,"
+
+",moradia,arrendar
 " Carcavelos e Parede, Cascais, Lisboa",T4,2500,188,4,Usado,moradia,arrendar
 " São Domingos de Rana, Cascais, Lisboa",T3,2900,245,3,Novo,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,2500,253,3,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,2600,"156,50",3,Usado,moradia,arrendar
-" Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T10 ou superior,6800,407,4,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,3500,"142,96",4,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T4,4500,"279,75",4,Usado,moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T3,2600,167,4,Usado,moradia,arrendar
-" Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T2,1500,"85,50",2,Usado,moradia,arrendar
+" São Domingos de Rana, Cascais, Lisboa",T6,3500,"285,82",4,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,2300,210,3,Usado,moradia,arrendar
 " Ericeira, Mafra, Lisboa",T10 ou superior,15000,320,4,"
 
 ",moradia,arrendar
+" Ericeira, Mafra, Lisboa",T3,1700,"183,52",4,Usado,moradia,arrendar
 " Alvalade, Lisboa",T7,25000,848,4,"
 
 ",moradia,arrendar
 " Ajuda, Lisboa",T5,2900,200,4,Renovado,moradia,arrendar
-" Rio de Mouro, Sintra, Lisboa",T7,2990,320,4,Usado,moradia,arrendar
+" Alfragide, Amadora, Lisboa",T0,79000,391,,,moradia,arrendar
+" Cacém e São Marcos, Sintra, Lisboa",T0,385000,768,,,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T4,6950,300,1,Usado,moradia,arrendar
+" Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T5,3850,285,4,Usado,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T5,5000,235,4,Usado,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T4,3600,187,4,Renovado,moradia,arrendar
-" Lumiar, Lisboa",T7,25000,1010,,"
-
-",moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T3,1250,98,2,Usado,moradia,arrendar
+" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T5,4000,293,4,Usado,moradia,arrendar
+" Porto Salvo, Oeiras, Lisboa",T4,900,120,1,Usado,moradia,arrendar
+" Porto Salvo, Oeiras, Lisboa",T4,900,130,1,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T6,2300,189,3,Usado,moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T7,13500,180,3,Usado,moradia,arrendar
 " Carcavelos e Parede, Cascais, Lisboa",T4,3000,290,4,Usado,moradia,arrendar
+" Algueirão-Mem Martins, Sintra, Lisboa",T2,900,85,1,Renovado,moradia,arrendar
+" Rio de Mouro, Sintra, Lisboa",T0,10000,233,,,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T3,2750,180,3,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T5,4000,285,,"
                                                                                                         Sucessos Confiantes                                                                                        ",moradia,arrendar
-" Porto Salvo, Oeiras, Lisboa",T5,1800,152,3,"
+" Porto Salvo, Oeiras, Lisboa",T5,1650,152,3,"
 
 ",moradia,arrendar
 " Lourinhã e Atalaia, Lourinhã, Lisboa",T4,1700,160,3,Renovado,moradia,arrendar
@@ -367,20 +399,24 @@ local,rooms,price,area,restroom,status,kind,movel
 
 ",moradia,arrendar
 " São Domingos de Rana, Cascais, Lisboa",T1,900,50,1,Usado,moradia,arrendar
-" Almargem do Bispo, Pêro Pinheiro e Montelavar, Sintra, Lisboa",T3,1200,90,2,Renovado,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T2,2500,80,2,Usado,moradia,arrendar
-" Almargem do Bispo, Pêro Pinheiro e Montelavar, Sintra, Lisboa",T4,6000,385,4,Usado,moradia,arrendar
 " Carnaxide e Queijas, Oeiras, Lisboa",T4,10000,560,4,Novo,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T2,1750,216,2,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T5,2300,168,3,Usado,moradia,arrendar
-" Penha de França, Lisboa",T4,5900,233,4,Renovado,moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T3,2200,133,3,Renovado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T6,6000,340,,"
+
+",moradia,arrendar
+" Porto Salvo, Oeiras, Lisboa",T1,500,40,,"
+",moradia,arrendar
+" Porto Salvo, Oeiras, Lisboa",T4,1000,140,1,"
+",moradia,arrendar
+" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T5,9000,405,4,Novo,moradia,arrendar
+" Carnaxide e Queijas, Oeiras, Lisboa",T6,2300,"269,50",4,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T3,1750,180,2,Usado,moradia,arrendar
 " Alvalade, Lisboa",T6,4000,318,4,Usado,moradia,arrendar
 " Malveira e São Miguel de Alcainça, Mafra, Lisboa",T4,1100,131,2,Usado,moradia,arrendar
 " Carcavelos e Parede, Cascais, Lisboa",T4,2500,163,4,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T7,6000,390,4,Usado,moradia,arrendar
 " Avenidas Novas, Lisboa",T3,3000,134,2,Usado,moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T6,2400,140,3,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T6,4500,"306,36",4,Usado,moradia,arrendar
 " Belém, Lisboa",T4,3750,118,,"
 
 ",moradia,arrendar
@@ -389,40 +425,29 @@ local,rooms,price,area,restroom,status,kind,movel
 ",moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T4,5000,"246,36",,"
                                                                                                         Sucessos Confiantes                                                                                        ",moradia,arrendar
-" Lourinhã e Atalaia, Lourinhã, Lisboa",T4,2000,"184,35",4,Usado,moradia,arrendar
 " Ericeira, Mafra, Lisboa",T3,1600,110,2,Usado,moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T3,1200,160,3,Usado,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T4,3900,200,3,Renovado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T6,5200,300,4,Usado,moradia,arrendar
 " Estrela, Lisboa",T3,2000,130,2,Usado,moradia,arrendar
 " Alvalade, Lisboa",T5,25000,802,,"
 
 ",moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T6,9500,535,4,Usado,moradia,arrendar
-" Santo António, Lisboa",T1,900,40,2,Usado,moradia,arrendar
-" Carcavelos e Parede, Cascais, Lisboa",T4,3000,290,,"
-
-",moradia,arrendar
+" Silveira, Torres Vedras, Lisboa",T2,950,153,2,Usado,moradia,arrendar
 " Lourinhã e Atalaia, Lourinhã, Lisboa",T4,2500,"200,79",4,Novo,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,4000,210,4,Renovado,moradia,arrendar
-" Pontinha e Famões, Odivelas, Lisboa",T2,850,90,2,Renovado,moradia,arrendar
+" Alvalade, Lisboa",T6,4000,370,4,Usado,moradia,arrendar
 " Venda do Pinheiro e Santo Estêvão das Galés, Mafra, Lisboa",T4,2500,418,4,Usado,moradia,arrendar
 " Colares, Sintra, Lisboa",T3,5000,233,4,Renovado,moradia,arrendar
-" São Domingos de Rana, Cascais, Lisboa",T5,3500,"246,69",4,"
-                                                                                                        RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T4,3750,153,4,"
-                                                                                                        RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
-" Carcavelos e Parede, Cascais, Lisboa",T4,2500,225,4,"
-
-",moradia,arrendar
 " Algueirão-Mem Martins, Sintra, Lisboa",T5,2800,"163,02",3,"
 
 ",moradia,arrendar
-" Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T10 ou superior,6800,407,4,Usado,moradia,arrendar
-" Belém, Lisboa",T7,12000,541,4,Usado,moradia,arrendar
-" Alvalade, Lisboa",T5,4000,318,,"
+" Carcavelos e Parede, Cascais, Lisboa",T4,2500,225,4,"
 
 ",moradia,arrendar
-" Porto Salvo, Oeiras, Lisboa",T2,850,100,1,"
+" Belém, Lisboa",T7,12000,541,4,Usado,moradia,arrendar
+" Alvalade, Lisboa",T5,4000,318,,"
 
 ",moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,2500,253,3,"
@@ -431,10 +456,14 @@ local,rooms,price,area,restroom,status,kind,movel
 " Carcavelos e Parede, Cascais, Lisboa",T5,3600,300,4,"
 
 ",moradia,arrendar
-" Lourinhã e Atalaia, Lourinhã, Lisboa",T4,1450,170,,"
+" São Domingos de Rana, Cascais, Lisboa",T2,900,60,1,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T5,2500,203,4,Usado,moradia,arrendar
+" São João das Lampas e Terrugem, Sintra, Lisboa",T0,25000,88,,,moradia,arrendar
+" Ajuda, Lisboa",T4,2500,121,3,"
+                                                                                                        REMAX GOLDEN LINE 2                                                                                        ",moradia,arrendar
+" Lourinhã e Atalaia, Lourinhã, Lisboa",T4,1200,170,,"
 
 ",moradia,arrendar
-" Pontinha e Famões, Odivelas, Lisboa",T3,800,100,1,Usado,moradia,arrendar
 " Carcavelos e Parede, Cascais, Lisboa",T3,3000,200,3,Novo,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,2000,150,3,Usado,moradia,arrendar
 " Alvalade, Lisboa",T10 ou superior,,865,,Casas de Banho: 4 ou mais,moradia,arrendar
@@ -444,198 +473,170 @@ local,rooms,price,area,restroom,status,kind,movel
 
 ",moradia,arrendar
 " Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T6,,183,,,moradia,arrendar
-" Olivais, Lisboa",T3,1600,110,1,"
+" Estrela, Lisboa",T1,650,72,1,Usado,moradia,arrendar
+" São João das Lampas e Terrugem, Sintra, Lisboa",T2,750,30,1,"
 
 ",moradia,arrendar
-" São Domingos de Rana, Cascais, Lisboa",T6,2700,"206,70",4,"
-
-",moradia,arrendar
-" Olivais, Lisboa",T5,3700,260,4,Renovado,moradia,arrendar
 " São Domingos de Rana, Cascais, Lisboa",T4,2750,"169,50",4,"
 
 ",moradia,arrendar
-" Benfica, Lisboa",T6,2500,145,2,Renovado,moradia,arrendar
-" Estrela, Lisboa",T1,650,72,1,Usado,moradia,arrendar
-" São Domingos de Rana, Cascais, Lisboa",T4,2000,90,3,"
-
-",moradia,arrendar
-" Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T5,4800,250,4,"
-
-",moradia,arrendar
-" Benfica, Lisboa",T2,1100,119,1,Renovado,moradia,arrendar
 " Marvila, Lisboa",T3,,91,1,Renovado,moradia,arrendar
 " Ericeira, Mafra, Lisboa",T4,1950,152,2,Usado,moradia,arrendar
-" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T5,4000,293,3,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T3,2750,180,3,Usado,moradia,arrendar
+" Olivais, Lisboa",T5,3700,260,4,Renovado,moradia,arrendar
+" Benfica, Lisboa",T6,2500,145,2,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,5500,220,3,Usado,moradia,arrendar
 " Camarate, Unhos e Apelação, Loures, Lisboa",T3,1300,102,2,Usado,moradia,arrendar
 " Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T4,4500,"271,74",4,Usado,moradia,arrendar
-" São Domingos de Rana, Cascais, Lisboa",T4,1650,180,2,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T5,6500,280,4,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T3,3900,279,,"
-
-",moradia,arrendar
+" São Domingos de Rana, Cascais, Lisboa",T4,1750,180,2,Usado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T4,4500,"200,67",4,Renovado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T4,3900,279,3,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T2,2600,165,2,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T10 ou superior,8500,221,4,Usado,moradia,arrendar
 " Alcabideche, Cascais, Lisboa",T3,3900,200,3,Novo,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T7,10000,1600,,"
 
 ",moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T4,5750,197,3,Usado,moradia,arrendar
 " Campolide, Lisboa",T3,2600,115,2,"
 
 ",moradia,arrendar
-" Areeiro, Lisboa",T3,3300,210,,Casas de Banho: 3,moradia,arrendar
 " Ajuda, Lisboa",T3,2900,154,4,Renovado,moradia,arrendar
-" Santa Iria de Azoia, São João da Talha e Bobadela, Loures, Lisboa",T2,500,65,1,Renovado,moradia,arrendar
+" Mafra, Lisboa",T5,1200,120,1,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,3000,190,3,Usado,moradia,arrendar
-" Penha de França, Lisboa",T3,1850,111,3,Usado,moradia,arrendar
-" Painho e Figueiros, Cadaval, Lisboa",T3,700,200,3,Usado,moradia,arrendar
 " Alvalade, Lisboa",T9,25000,439,4,Renovado,moradia,arrendar
-" Enxara do Bispo, Gradil e Vila Franca do Rosário, Mafra, Lisboa",T3,800,150,2,"
-                                                                                                        RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
 " Santa Iria de Azoia, São João da Talha e Bobadela, Loures, Lisboa",T2,750,"83,95",1,"
                                                                                                         RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
-" Loures, Lisboa",T1,500,40,1,Usado,moradia,arrendar
 " Barcarena, Oeiras, Lisboa",T3,1850,131,3,"
 
 ",moradia,arrendar
+" Loures, Lisboa",T1,500,40,1,Usado,moradia,arrendar
+" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T0,45000,50,,,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,7900,"423,50",4,Novo,moradia,arrendar
-" Carcavelos e Parede, Cascais, Lisboa",T4,3000,220,4,Renovado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T7,6000,427,,"
-
-",moradia,arrendar
-" Venda do Pinheiro e Santo Estêvão das Galés, Mafra, Lisboa",T2,1200,120,1,Usado,moradia,arrendar
+" Alcabideche, Cascais, Lisboa",T4,8000,279,4,"
+                                                                                                        RE/MAX G4CAIS                                                                                        ",moradia,arrendar
+" Enxara do Bispo, Gradil e Vila Franca do Rosário, Mafra, Lisboa",T3,800,150,2,"
+                                                                                                        RE/MAX + Grupo Vantagem                                                                                        ",moradia,arrendar
 " Colares, Sintra, Lisboa",T5,7500,556,4,Usado,moradia,arrendar
-" São Domingos de Rana, Cascais, Lisboa",T2,800,59,1,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,7000,500,4,Renovado,moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T5,7500,557,4,Usado,moradia,arrendar
+" Carcavelos e Parede, Cascais, Lisboa",T2,750,56,,"
+
+",moradia,arrendar
 " Alvalade, Lisboa",T9,10000,295,4,Usado,moradia,arrendar
 " São Domingos de Rana, Cascais, Lisboa",T4,2700,120,1,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,790000,180,,,moradia,arrendar
-" Santa Iria de Azoia, São João da Talha e Bobadela, Loures, Lisboa",T3,1000,150,2,Renovado,moradia,arrendar
 " Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T5,7500,550,4,Usado,moradia,arrendar
-" Alverca do Ribatejo e Sobralinho, Vila Franca de Xira, Lisboa",T1,460,45,1,Renovado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T4,4000,210,4,Usado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T5,1700,"237,17",3,"
-
-",moradia,arrendar
+" Odivelas, Lisboa",T1,400,45,1,Novo,moradia,arrendar
+" Arroios, Lisboa",T2,1500,200,2,Novo,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,8500,350,3,Novo,moradia,arrendar
 " São Domingos de Rana, Cascais, Lisboa",T1,900,72,1,Usado,moradia,arrendar
+" Olivais, Lisboa",T3,1600,110,1,"
+
+",moradia,arrendar
 " Santo Isidoro, Mafra, Lisboa",T3,900,126,,"
 
 ",moradia,arrendar
-" Encarnação, Mafra, Lisboa",T3,2800,288,3,Renovado,moradia,arrendar
 " Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T1,750,"43,50",1,Renovado,moradia,arrendar
-" Carnaxide e Queijas, Oeiras, Lisboa",T1,700,80,3,Renovado,moradia,arrendar
+" Colares, Sintra, Lisboa",T2,950,80,1,Novo,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T4,3250,220,4,"
 
 ",moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T9,,612,,"
 
 ",moradia,arrendar
-" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T2,650,80,1,Usado,moradia,arrendar
-" São João das Lampas e Terrugem, Sintra, Lisboa",T2,750,30,1,"
-
-",moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T6,6000,345,4,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T3,7275,150,,,moradia,arrendar
-" Santa Iria de Azoia, São João da Talha e Bobadela, Loures, Lisboa",T2,900,200,2,Usado,moradia,arrendar
-" Azueira e Sobral da Abelheira, Mafra, Lisboa",T2,450,50,1,Usado,moradia,arrendar
-" Ajuda, Lisboa",T5,1800,165,3,Usado,moradia,arrendar
+" Agualva e Mira-Sintra, Sintra, Lisboa",T3,950,69,3,Renovado,moradia,arrendar
+" Ponte do Rol, Torres Vedras, Lisboa",T1,400,30,1,Usado,moradia,arrendar
+" São João das Lampas e Terrugem, Sintra, Lisboa",T1,650,50,1,Usado,moradia,arrendar
+" Sapataria, Sobral de Monte Agraço, Lisboa",T2,450,80,1,Novo,moradia,arrendar
+" Ajuda, Lisboa",T5,1690,165,3,Usado,moradia,arrendar
 " Oeiras e São Julião da Barra, Paço de Arcos e Caxias, Oeiras, Lisboa",T5,1500,200,3,Usado,moradia,arrendar
+" Igreja Nova e Cheleiros, Mafra, Lisboa",T4,600,100,1,Usado,moradia,arrendar
 " Colares, Sintra, Lisboa",T4,2800,800,2,Usado,moradia,arrendar
-" Olivais, Lisboa",T5,1800,200,3,Renovado,moradia,arrendar
-" Santo António dos Cavaleiros e Frielas, Loures, Lisboa",T3,675,118,2,Usado,moradia,arrendar
-" Alcabideche, Cascais, Lisboa",T3,2990,"195,08",,"
-
-",moradia,arrendar
-" Alvalade, Lisboa",T2,900,70,,Casas de Banho: 1,moradia,arrendar
+" Olivais, Lisboa",T5,1600,200,3,Renovado,moradia,arrendar
+" Beato, Lisboa",T1,2500,150,1,Novo,moradia,arrendar
+" Alvalade, Lisboa",T2,900,70,1,Renovado,moradia,arrendar
 " Dois Portos e Runa, Torres Vedras, Lisboa",T2,500,98,1,Usado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T2,5850,109,,,moradia,arrendar
-" Ventosa, Torres Vedras, Lisboa",T1,550,60,1,"
-                                            Anúncio particular                                    ",moradia,arrendar
-" Pontinha e Famões, Odivelas, Lisboa",T2,850,90,2,Renovado,moradia,arrendar
 " Alvalade, Lisboa",T10 ou superior,20000,823,,"
 
 ",moradia,arrendar
+" Ericeira, Mafra, Lisboa",T2,670,95,2,Renovado,moradia,arrendar
+" Cascais e Estoril, Cascais, Lisboa",T1,600,"28,30",1,Usado,moradia,arrendar
 " Santo António, Lisboa",T1,1200,80,1,Renovado,moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T1,750,55,,"
 
 ",moradia,arrendar
+" Turcifal, Torres Vedras, Lisboa",T2,390,400,1,Renovado,moradia,arrendar
+" Igreja Nova e Cheleiros, Mafra, Lisboa",T1,650,80,1,Novo,moradia,arrendar
+" Ajuda, Lisboa",T3,1450,90,2,Renovado,moradia,arrendar
 " São Pedro da Cadeira, Torres Vedras, Lisboa",T2,350,60,1,Renovado,moradia,arrendar
-" São Pedro da Cadeira, Torres Vedras, Lisboa",T1,430,42,1,Renovado,moradia,arrendar
+" Ramada e Caneças, Odivelas, Lisboa",T2,900,115,2,Usado,moradia,arrendar
 " Pontinha e Famões, Odivelas, Lisboa",T2,670,65,,"
 ",moradia,arrendar
-" Algés, Linda-a-Velha e Cruz Quebrada-Dafundo, Oeiras, Lisboa",T2,3000,250,2,Renovado,moradia,arrendar
-" Ramada e Caneças, Odivelas, Lisboa",T2,900,115,2,Usado,moradia,arrendar
+" Carcavelos e Parede, Cascais, Lisboa",T2,1000,75,,"
+
+",moradia,arrendar
 " Cascais e Estoril, Cascais, Lisboa",T1,3975,120,,,moradia,arrendar
-" Sintra (Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim), Sintra, Lisboa",T2,850,60,,"
+" São João das Lampas e Terrugem, Sintra, Lisboa",T1,450,1,1,Renovado,moradia,arrendar
+" Avenidas Novas, Lisboa",T3,1600,90,,"
 
 ",moradia,arrendar
-" Arroios, Lisboa",T2,450,35,1,Renovado,moradia,arrendar
-" Cascais e Estoril, Cascais, Lisboa",T4,4500,320,4,"
-
-",moradia,arrendar
-" Póvoa de Santa Iria e Forte da Casa, Vila Franca de Xira, Lisboa",T2,600,90,1,Usado,moradia,arrendar
 " Azambuja, Lisboa",T3,600,90,1,Usado,moradia,arrendar
-" Mina de Água, Amadora, Lisboa",T1,425,30,,"
-
+" Gavião e Atalaia, Gavião, Portalegre",T2,300,"79,79",,,moradia,arrendar
+" Avis, Portalegre",T5,600,286,2,Usado,moradia,arrendar
+" Foros de Arrão, Ponte de Sor, Portalegre",T3,300,150,,,moradia,arrendar
+" Alfena, Valongo, Porto",T3,1200,145,3,Usado,moradia,arrendar
+" Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T4,2300,326,4,Renovado,moradia,arrendar
+" Mindelo, Vila do Conde, Porto",T4,1100,121,2,"
 ",moradia,arrendar
-" Assunção, Ajuda, Salvador e Santo Ildefonso, Elvas, Portalegre",T2,350,90,1,Renovado,moradia,arrendar
-" Sé e São Lourenço, Portalegre",T2,480,85,2,"
-
-",moradia,arrendar
-" Caia, São Pedro e Alcáçova, Elvas, Portalegre",T2,700,50,1,Renovado,moradia,arrendar
-" Campanhã, Porto",T1,400,20,1,Renovado,moradia,arrendar
-" Canidelo, Vila Nova de Gaia, Porto",T4,1350,"252,60",,,moradia,arrendar
-" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T4,850,129,,,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T10 ou superior,6000,271,1,Renovado,moradia,arrendar
 " Matosinhos e Leça da Palmeira, Matosinhos, Porto",T4,4000,249,4,"
 
 ",moradia,arrendar
-" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T6,3000,353,2,"
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T6,3000,354,2,"
 
 ",moradia,arrendar
 " Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T1,750,92,,Casas de Banho: 1,moradia,arrendar
-" Mindelo, Vila do Conde, Porto",T4,1100,121,2,"
+" Aldoar, Foz do Douro e Nevogilde, Porto",T3,1700,110,2,"
+
 ",moradia,arrendar
 " Ramalde, Porto",T4,2300,"286,25",4,Renovado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T3,1950,160,3,Renovado,moradia,arrendar
 " Madalena, Vila Nova de Gaia, Porto",T4,4000,240,4,Usado,moradia,arrendar
 " Campanhã, Porto",T5,1100,145,4,Usado,moradia,arrendar
-" Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T4,1750,320,3,"
+" Arcozelo, Vila Nova de Gaia, Porto",T4,2500,420,4,"
 
 ",moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T6,2300,"326,35",4,Renovado,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T4,2500,190,3,Usado,moradia,arrendar
 " São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T4,2200,300,3,Usado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T5,2450,144,3,Usado,moradia,arrendar
+" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T2,2000,200,3,Renovado,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T2,2200,"143,30",,"
+                                                                                                        Residents                                                                                        ",moradia,arrendar
+" Matosinhos e Leça da Palmeira, Matosinhos, Porto",T4,2800,360,,Casas de Banho: 4 ou mais,moradia,arrendar
+" Matosinhos e Leça da Palmeira, Matosinhos, Porto",T4,2800,360,,Casas de Banho: 4 ou mais,moradia,arrendar
 " Castêlo da Maia, Maia, Porto",T5,2000,215,3,Usado,moradia,arrendar
-" Rio Tinto, Gondomar, Porto",T3,800,81,2,"
-
-",moradia,arrendar
-" Arcozelo, Vila Nova de Gaia, Porto",T5,2000,326,4,Usado,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T6,2300,216,3,Renovado,moradia,arrendar
-" Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T4,1990,420,,"
-",moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T3,1600,"123,74",,"
-
-",moradia,arrendar
+" Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T5,2000,326,4,Usado,moradia,arrendar
+" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T2,850,72,2,Renovado,moradia,arrendar
 " Milheirós, Maia, Porto",T4,3000,442,4,"
                                                                                                         Remax Vintage                                                                                        ",moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T2,2200,"143,30",3,Usado,moradia,arrendar
-" Fânzeres e São Pedro da Cova, Gondomar, Porto",T4,219000,120,2,Usado,moradia,arrendar
 " Santo Tirso, Couto (Santa Cristina e São Miguel) e Burgães, Santo Tirso, Porto",T4,2500,216,3,Usado,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T3,1400,118,2,"
-
-",moradia,arrendar
-" Rio Tinto, Gondomar, Porto",T3,1100,112,2,Usado,moradia,arrendar
 " Rio Tinto, Gondomar, Porto",T3,1050,112,2,Usado,moradia,arrendar
 " Ramalde, Porto",T2,1750,164,1,Usado,moradia,arrendar
 " Ramalde, Porto",T6,2300,216,3,Renovado,moradia,arrendar
-" Vila Chã, Vila do Conde, Porto",T3,750,246,2,Usado,moradia,arrendar
+" Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T4,1750,320,3,"
+
+",moradia,arrendar
+" Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T4,1990,420,,"
+",moradia,arrendar
+" Aguçadoura e Navais, Povoa de Varzim, Porto",T2,500,60,2,Usado,moradia,arrendar
 " Azurara, Vila do Conde, Porto",T2,1100,103,2,Renovado,moradia,arrendar
-" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T4,1200,192,2,Usado,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Usado,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Renovado,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Usado,moradia,arrendar
 " Póvoa de Varzim, Beiriz e Argivai, Povoa de Varzim, Porto",T3,700,90,,Casas de Banho: 2,moradia,arrendar
 " Rio Tinto, Gondomar, Porto",T3,950,131,2,"
 
@@ -643,21 +644,21 @@ local,rooms,price,area,restroom,status,kind,movel
 " Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T2,700,100,,"
 
 ",moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T1,750,75,,"
+" Vilar de Andorinho, Vila Nova de Gaia, Porto",T3,820,130,2,Usado,moradia,arrendar
+" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T4,1800,159,2,Usado,moradia,arrendar
+" Alfena, Valongo, Porto",T3,1100,180,3,"
 
 ",moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T2,1100,116,2,Usado,moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T4,1800,159,2,Usado,moradia,arrendar
+" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T2,2560,160,2,Renovado,moradia,arrendar
 " Paranhos, Porto",T3,1100,150,,"
 
 ",moradia,arrendar
 " Nogueira e Silva Escura, Maia, Porto",T4,1500,185,3,Usado,moradia,arrendar
-" Campanhã, Porto",T3,950,88,3,Novo,moradia,arrendar
-" Nogueira e Silva Escura, Maia, Porto",T4,1500,185,3,Usado,moradia,arrendar
 " Paranhos, Porto",T5,2500,289,3,"
                                                                                                         REMAX PRO                                                                                        ",moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T2,2500,"130,70",3,Em construção,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T4,3600,351,4,Novo,moradia,arrendar
+" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T4,3500,390,,"
+
+",moradia,arrendar
 " Madalena, Vila Nova de Gaia, Porto",T4,4000,300,4,Novo,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T1,600,42,1,Renovado,moradia,arrendar
 " Rio Tinto, Gondomar, Porto",T5,4000,552,,"
@@ -666,65 +667,79 @@ local,rooms,price,area,restroom,status,kind,movel
 " Rio Tinto, Gondomar, Porto",T5,4000,552,,"
 
 ",moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Renovado,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2450,200,3,Renovado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,174,3,Usado,moradia,arrendar
 " Paranhos, Porto",T3,1750,120,2,Usado,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T2,2560,160,3,Renovado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T2,2800,176,3,Renovado,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T1,1100,85,1,Renovado,moradia,arrendar
-" Matosinhos e Leça da Palmeira, Matosinhos, Porto",T2,800,90,2,"
-
-",moradia,arrendar
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T3,1950,249,2,Usado,moradia,arrendar
+" Castêlo da Maia, Maia, Porto",T5,2000,215,3,Usado,moradia,arrendar
 " Foz do Sousa e Covelo, Gondomar, Porto",T3,275000,160,1,Usado,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T1,500,30,1,"
 
 ",moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T3,2250,105,3,Novo,moradia,arrendar
-" Campanhã, Porto",T3,1400,109,3,"
+" Alfena, Valongo, Porto",T0,1100,146,,"
 
 ",moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T2,2300,176,3,Usado,moradia,arrendar
-" São Felix da Marinha, Vila Nova de Gaia, Porto",T3,1250,147,2,Novo,moradia,arrendar
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T2,600,90,2,"
+",moradia,arrendar
+" Ramalde, Porto",T2,400,80,,,moradia,arrendar
+" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T3,1200,120,2,"
+
+",moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T2,1100,116,2,Usado,moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T5,7000,716,4,Usado,moradia,arrendar
+" Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T3,850,"79,20",1,Renovado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T2,2200,143,3,Usado,moradia,arrendar
-" Aver-O-Mar, Amorim e Terroso, Povoa de Varzim, Porto",T3,800,140,2,Usado,moradia,arrendar
 " Custóias, Leça do Balio e Guifões, Matosinhos, Porto",T4,2200,333,4,Usado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T5,4950,480,4,Usado,moradia,arrendar
 " Custóias, Leça do Balio e Guifões, Matosinhos, Porto",T4,2500,300,3,Usado,moradia,arrendar
+" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T3,2560,160,3,Usado,moradia,arrendar
+" Valongo, Porto",T2,700,121,1,"
+
+",moradia,arrendar
 " Arcozelo, Vila Nova de Gaia, Porto",T5,2000,450,4,Usado,moradia,arrendar
 " Mindelo, Vila do Conde, Porto",T5,2500,100,4,Novo,moradia,arrendar
 " Nogueira e Silva Escura, Maia, Porto",T4,1500,184,4,Novo,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Usado,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T1,575,30,1,Novo,moradia,arrendar
 " São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T4,395000,200,,Casas de Banho: 2,moradia,arrendar
-" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T3,1600,130,3,"
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T3,1500,130,3,"
                                             Anúncio particular                                    ",moradia,arrendar
-" Canidelo, Vila Nova de Gaia, Porto",T4,2500,355,4,Usado,moradia,arrendar
-" Sandim, Olival, Lever e Crestuma, Vila Nova de Gaia, Porto",T5,900,160,2,Renovado,moradia,arrendar
+" Canidelo, Vila Nova de Gaia, Porto",T4,2000,355,4,Usado,moradia,arrendar
 " Estela, Povoa de Varzim, Porto",T5,3000,250,,Casas de Banho: 4 ou mais,moradia,arrendar
-" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T4,1350,220,4,Usado,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T2,2560,160,3,Renovado,moradia,arrendar
-" Fânzeres e São Pedro da Cova, Gondomar, Porto",T2,500,70,1,Usado,moradia,arrendar
+" Bonfim, Porto",T1,500,50,1,Renovado,moradia,arrendar
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T2,650,70,2,Renovado,moradia,arrendar
 " Nogueira e Silva Escura, Maia, Porto",T4,1500,200,4,Usado,moradia,arrendar
 " Matosinhos e Leça da Palmeira, Matosinhos, Porto",T2,3000,544,,"
 
 ",moradia,arrendar
 " Madalena, Vila Nova de Gaia, Porto",T4,3500,300,4,Novo,moradia,arrendar
-" Recarei, Paredes, Porto",T6,2500,269,2,Usado,moradia,arrendar
 " Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T3,2600,210,4,Usado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T1,950,72,2,Usado,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T3,900,80,2,Renovado,moradia,arrendar
+" Água Longa, Santo Tirso, Porto",T3,1800,160,3,Renovado,moradia,arrendar
 " Mindelo, Vila do Conde, Porto",T5,2500,280,3,Usado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T3,1100,132,2,Usado,moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T4,2500,330,4,Usado,moradia,arrendar
-" Serzedo e Perosinho, Vila Nova de Gaia, Porto",T4,2500,290,4,Novo,moradia,arrendar
+" Lordelo do Ouro e Massarelos, Porto",T4,3000,160,2,Renovado,moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T5,2500,420,4,Usado,moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T5,7000,505,4,Usado,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T0,2650,160,2,Usado,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,"
-                                                                                                        Maiagest                                                                                        ",moradia,arrendar
+" Campanhã, Porto",T3,1400,109,3,"
+
+",moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Renovado,moradia,arrendar
+" Alfena, Valongo, Porto",T3,1100,146,3,Usado,moradia,arrendar
+" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T3,1200,120,2,"
+
+",moradia,arrendar
+" São Felix da Marinha, Vila Nova de Gaia, Porto",T3,600,75,2,"
+
+",moradia,arrendar
+" Ramalde, Porto",T1,650,"34,30",1,Renovado,moradia,arrendar
+" Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T2,780,80,2,Novo,moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T4,2000,245,4,Renovado,moradia,arrendar
-" Castêlo da Maia, Maia, Porto",T5,2000,215,3,Usado,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T3,2500,136,3,"
 
 ",moradia,arrendar
@@ -734,128 +749,148 @@ local,rooms,price,area,restroom,status,kind,movel
 " Lordelo do Ouro e Massarelos, Porto",T2,1250,110,1,"
 
 ",moradia,arrendar
-" Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T3,850,"79,20",1,Renovado,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T5,2650,160,,,moradia,arrendar
-" Ramalde, Porto",T1,650,"34,30",1,Renovado,moradia,arrendar
 " Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T4,2500,264,3,Usado,moradia,arrendar
 " Paranhos, Porto",T7,2200,240,4,Usado,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,174,,"
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2450,174,,"
 
 ",moradia,arrendar
 " Ramalde, Porto",T7,7000,372,,"
 
 ",moradia,arrendar
-" Valongo, Porto",T3,1200,220,3,Novo,moradia,arrendar
-" Fânzeres e São Pedro da Cova, Gondomar, Porto",T2,500,70,1,Usado,moradia,arrendar
-" Fânzeres e São Pedro da Cova, Gondomar, Porto",T2,500,70,1,Usado,moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T4,1500,220,4,Renovado,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T1,575,30,1,Novo,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T1,575,30,1,Novo,moradia,arrendar
-" Baguim do Monte, Gondomar, Porto",T2,630,90,1,Usado,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Usado,moradia,arrendar
+" Gondomar (São Cosme), Valbom e Jovim, Gondomar, Porto",T1,600,70,1,Usado,moradia,arrendar
+" Matosinhos e Leça da Palmeira, Matosinhos, Porto",T2,600,80,1,Renovado,moradia,arrendar
 " São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T4,2200,333,3,Usado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T5,2750,200,3,Usado,moradia,arrendar
 " Aldoar, Foz do Douro e Nevogilde, Porto",T1,950,72,2,Usado,moradia,arrendar
-" Ermesinde, Valongo, Porto",T3,750,147,2,Usado,moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T1,650,29,1,Renovado,moradia,arrendar
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T2,1200,160,3,Usado,moradia,arrendar
+" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T1,600,29,1,Renovado,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T1,600,95,1,"
 
 ",moradia,arrendar
 " Vilar de Andorinho, Vila Nova de Gaia, Porto",T6,3000,530,,,moradia,arrendar
 " Paranhos, Porto",T7,2200,233,,,moradia,arrendar
-" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T2,650,70,2,Renovado,moradia,arrendar
-" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T2,600,68,1,Usado,moradia,arrendar
-" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T2,625,79,1,Usado,moradia,arrendar
-" Paranhos, Porto",T6,2200,"261,50",4,Usado,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T1,575,21,1,Novo,moradia,arrendar
+" Mindelo, Vila do Conde, Porto",T5,2500,280,3,Renovado,moradia,arrendar
+" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T2,700,76,2,Renovado,moradia,arrendar
 " Vila do Conde, Porto",T4,2700,234,3,Usado,moradia,arrendar
-" Campanhã, Porto",T3,1500,180,4,"
-
-",moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T1,650,50,,"
+" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T4,850,129,,,moradia,arrendar
+" Paranhos, Porto",T6,2200,"261,50",4,Usado,moradia,arrendar
+" Lordelo do Ouro e Massarelos, Porto",T1,550,50,,"
 
 ",moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T2,600,96,,"
 
 ",moradia,arrendar
-" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T4,2900,340,,"
-
-",moradia,arrendar
 " Bonfim, Porto",T1,500,28,,,moradia,arrendar
+" Aldoar, Foz do Douro e Nevogilde, Porto",T4,2450,200,3,Usado,moradia,arrendar
 " Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T5,2000,296,,,moradia,arrendar
-" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T4,1100,113,2,Usado,moradia,arrendar
-" Nogueira e Silva Escura, Maia, Porto",T4,2600,250,4,Usado,moradia,arrendar
+" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T2,800,80,2,Renovado,moradia,arrendar
+" Lordelo do Ouro e Massarelos, Porto",T5,2650,160,,,moradia,arrendar
+" Campanhã, Porto",T1,425,30,1,Renovado,moradia,arrendar
+" São Felix da Marinha, Vila Nova de Gaia, Porto",T3,900,110,1,Renovado,moradia,arrendar
+" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T2,600,68,1,Usado,moradia,arrendar
+" Perafita, Lavra e Santa Cruz do Bispo, Matosinhos, Porto",T2,625,79,1,Usado,moradia,arrendar
+" Vila do Conde, Porto",T2,1200,130,1,Novo,moradia,arrendar
 " Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T3,1200,200,3,Usado,moradia,arrendar
 " Paço de Sousa, Penafiel, Porto",T3,195000,270,3,Usado,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T0,3000,270,,"
 
 ",moradia,arrendar
-" Nogueira e Silva Escura, Maia, Porto",T4,1500,341,4,"
-
-",moradia,arrendar
+" Pedrouços, Maia, Porto",T0,550,28,1,Renovado,moradia,arrendar
+" Nogueira e Silva Escura, Maia, Porto",T4,1500,341,4,Renovado,moradia,arrendar
 " Paranhos, Porto",T1,700,38,1,Renovado,moradia,arrendar
 " Bonfim, Porto",T1,650,48,,Casas de Banho: 1,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T4,1500,100,4,Renovado,moradia,arrendar
 " Castêlo da Maia, Maia, Porto",T3,1300,145,3,Usado,moradia,arrendar
+" Arcozelo, Vila Nova de Gaia, Porto",T3,3000,380,4,Renovado,moradia,arrendar
 " Vilar de Andorinho, Vila Nova de Gaia, Porto",T6,3000,530,,,moradia,arrendar
 " Lordelo do Ouro e Massarelos, Porto",T3,5500,315,3,Usado,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T4,2750,200,3,Usado,moradia,arrendar
-" Mafamude e Vilar do Paraíso, Vila Nova de Gaia, Porto",T4,1350,200,,,moradia,arrendar
+" Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T4,1300,270,4,Renovado,moradia,arrendar
+" São Mamede de Infesta e Senhora da Hora, Matosinhos, Porto",T4,1100,113,2,Usado,moradia,arrendar
 " Serzedo e Perosinho, Vila Nova de Gaia, Porto",T3,850,100,1,Renovado,moradia,arrendar
 " Serzedo e Perosinho, Vila Nova de Gaia, Porto",T3,850,100,1,Renovado,moradia,arrendar
-" Rio Tinto, Gondomar, Porto",T2,650,96,1,Renovado,moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T3,900,100,1,Usado,moradia,arrendar
-" Airães, Felgueiras, Porto",T3,500,110,2,Renovado,moradia,arrendar
+" Custóias, Leça do Balio e Guifões, Matosinhos, Porto",T1,549,75,1,Novo,moradia,arrendar
+" Cidade da Maia, Maia, Porto",T4,850,140,3,Usado,moradia,arrendar
+" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T1,115000,48,1,Novo,moradia,arrendar
 " Gulpilhares e Valadares, Vila Nova de Gaia, Porto",T5,2500,450,4,Usado,moradia,arrendar
 " Mindelo, Vila do Conde, Porto",T5,2500,280,3,Usado,moradia,arrendar
+" Lordelo do Ouro e Massarelos, Porto",T3,800,60,1,Renovado,moradia,arrendar
 " Croca, Penafiel, Porto",T1,49000,40,1,Usado,moradia,arrendar
-" Ramalde, Porto",T1,550,52,2,Novo,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T10 ou superior,6500,970,,,moradia,arrendar
+" Santa Marinha e São Pedro da Afurada, Vila Nova de Gaia, Porto",T4,1300,160,2,Usado,moradia,arrendar
+" Arcozelo, Vila Nova de Gaia, Porto",T1,650,45,1,Renovado,moradia,arrendar
 " Vila do Conde, Porto",T4,1300,180,3,Usado,moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T5,1500,200,3,Renovado,moradia,arrendar
+" Sousela, Lousada, Porto",T3,330,130,2,Usado,moradia,arrendar
 " Azurara, Vila do Conde, Porto",T3,950,105,2,Usado,moradia,arrendar
 " Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T10 ou superior,2000,320,,,moradia,arrendar
-" Grijó e Sermonde, Vila Nova de Gaia, Porto",T3,420000,220,3,Em construção,moradia,arrendar
 " Termas de São Vicente, Penafiel, Porto",T3,,150,2,Renovado,moradia,arrendar
-" Lordelo do Ouro e Massarelos, Porto",T10 ou superior,6500,970,,,moradia,arrendar
-" Aldoar, Foz do Douro e Nevogilde, Porto",T2,1150,72,2,Renovado,moradia,arrendar
+" Custóias, Leça do Balio e Guifões, Matosinhos, Porto",T1,650,40,,,moradia,arrendar
+" Valongo, Porto",T2,550,140,2,Renovado,moradia,arrendar
 " Alfena, Valongo, Porto",T8,2000,480,,,moradia,arrendar
-" Cedofeita, Santo Ildefonso, Sé, Miragaia, São Nicolau e Vitória, Porto",T1,235,60,1,Usado,moradia,arrendar
+" Paranhos, Porto",T1,500,38,1,"
+
+",moradia,arrendar
+" Castêlo da Maia, Maia, Porto",T0,1200,210,,"
+
+",moradia,arrendar
+" Santo Tirso, Couto (Santa Cristina e São Miguel) e Burgães, Santo Tirso, Porto",T2,500,90,2,Novo,moradia,arrendar
 " Paranhos, Porto",T4,2000,210,3,Usado,moradia,arrendar
-" Campanhã, Porto",T2,470,50,1,Renovado,moradia,arrendar
+" Campanhã, Porto",T2,600,50,1,Renovado,moradia,arrendar
+" Santo Tirso, Couto (Santa Cristina e São Miguel) e Burgães, Santo Tirso, Porto",T1,425,80,1,Renovado,moradia,arrendar
+" Pedroso e Seixezelo, Vila Nova de Gaia, Porto",T0,100,20,,"
+
+",moradia,arrendar
 " São Pedro de Tomar, Tomar, Santarém",T3,600,145,2,Usado,moradia,arrendar
+" Serra e Junceira, Tomar, Santarém",T6,1000,419,4,Usado,moradia,arrendar
 " Abrantes (São Vicente e São João) e Alferrarede, Abrantes, Santarém",T3,550,127,2,Usado,moradia,arrendar
 " Espite, Ourém, Santarém",T2,500,95,1,Renovado,moradia,arrendar
 " Fátima, Ourém, Santarém",T6,4000,664,4,"
 
 ",moradia,arrendar
 " Santo Estevão, Benavente, Santarém",T9,4200,546,4,Usado,moradia,arrendar
-" Nossa Senhora da Piedade, Ourém, Santarém",T5,780,300,4,Usado,moradia,arrendar
-" Paialvo, Tomar, Santarém",T2,380,60,1,Renovado,moradia,arrendar
-" Vale de Santarém, Santarém",T2,800,80,2,Renovado,moradia,arrendar
-" Caxarias, Ourém, Santarém",T3,350,85,1,Usado,moradia,arrendar
-" Benavente, Santarém",T1,400,39,1,"
+" Freixianda, Ribeira do Fárrio e Formigais, Ourém, Santarém",T3,600,202,2,Usado,moradia,arrendar
+" Paialvo, Tomar, Santarém",T3,750,"174,29",3,Renovado,moradia,arrendar
+" Vila Chã de Ourique, Cartaxo, Santarém",T4,600,"104,98",2,"
 
 ",moradia,arrendar
-" Vila Chã de Ourique, Cartaxo, Santarém",T3,710,180,2,Usado,moradia,arrendar
+" Serra e Junceira, Tomar, Santarém",T5,800,300,3,Usado,moradia,arrendar
+" Paialvo, Tomar, Santarém",T2,380,60,1,Renovado,moradia,arrendar
+" Caxarias, Ourém, Santarém",T3,350,85,1,Usado,moradia,arrendar
+" Vale de Santarém, Santarém",T2,800,80,2,Renovado,moradia,arrendar
+" Tomar (São João Baptista) e Santa Maria dos Olivais, Tomar, Santarém",T3,600,80,2,Renovado,moradia,arrendar
+" Vila Chã de Ourique, Cartaxo, Santarém",T3,850,180,2,Usado,moradia,arrendar
 " Parreira e Chouto, Chamusca, Santarém",T3,550,86,,"
 ",moradia,arrendar
 " Gondemaria e Olival, Ourém, Santarém",T1,490,100,1,Novo,moradia,arrendar
-" Tomar (São João Baptista) e Santa Maria dos Olivais, Tomar, Santarém",T3,500,120,,,moradia,arrendar
-" Além da Ribeira e Pedreira, Tomar, Santarém",T2,400,77,1,Usado,moradia,arrendar
-" Samora Correia, Benavente, Santarém",T2,650,110,2,Usado,moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T4,1290,200,3,Renovado,moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T4,2000,262,3,Usado,moradia,arrendar
+" São Vicente do Paul e Vale de Figueira, Santarém",T4,500,150,1,Usado,moradia,arrendar
+" Serra e Junceira, Tomar, Santarém",T3,550,"130,58",2,"
+                                                                                                        Grupo REMAX Rumo                                                                                        ",moradia,arrendar
+" Salvaterra de Magos e Foros de Salvaterra, Salvaterra de Magos, Santarém",T1,400,50,1,Renovado,moradia,arrendar
+" Rio Maior, Santarém",T3,200,70,,"
+
+",moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T4,1850,165,4,Usado,moradia,arrendar
+" Palmela, Setúbal",T2,950,108,,,moradia,arrendar
+" Corroios, Seixal, Setúbal",T5,5000,540,3,Usado,moradia,arrendar
+" Amora, Seixal, Setúbal",T3,850,132,2,Usado,moradia,arrendar
 " Charneca de Caparica e Sobreda, Almada, Setúbal",T3,2800,138,3,Usado,moradia,arrendar
 " Castelo (Sesimbra), Sesimbra, Setúbal",T3,2900,171,3,Usado,moradia,arrendar
 " Sines, Setúbal",T3,1600,"233,81",2,Usado,moradia,arrendar
-" Palhais e Coina, Barreiro, Setúbal",T4,1700,252,4,Usado,moradia,arrendar
+" Sines, Setúbal",T4,1600,150,2,Renovado,moradia,arrendar
 " Azeitão (São Lourenço e São Simão), Setúbal",T4,2800,345,3,"
 
 ",moradia,arrendar
-" Corroios, Seixal, Setúbal",T4,1400,199,3,Renovado,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T6,1800,436,4,"
+
+",moradia,arrendar
+" Corroios, Seixal, Setúbal",T3,2300,132,2,,moradia,arrendar
+" Palmela, Setúbal",T2,1200,150,,"
+
+",moradia,arrendar
 " Castelo (Sesimbra), Sesimbra, Setúbal",T3,2900,171,3,Usado,moradia,arrendar
+" Azeitão (São Lourenço e São Simão), Setúbal",T5,2850,163,4,Usado,moradia,arrendar
 " Palmela, Setúbal",T10 ou superior,6000,199,4,Usado,moradia,arrendar
-" Almada, Cova da Piedade, Pragal e Cacilhas, Almada, Setúbal",T2,800,67,1,Renovado,moradia,arrendar
+" Almada, Cova da Piedade, Pragal e Cacilhas, Almada, Setúbal",T2,900,67,1,Renovado,moradia,arrendar
 " Poceirão e Marateca, Palmela, Setúbal",T4,2850,500,2,Renovado,moradia,arrendar
 " Setúbal (São Julião, Nossa Senhora da Anunciada e Santa Maria da Graça), Setúbal",T1,850,"53,24",2,Usado,moradia,arrendar
 " Porto Covo, Sines, Setúbal",T4,1200,69,,"
@@ -865,35 +900,30 @@ local,rooms,price,area,restroom,status,kind,movel
 
 ",moradia,arrendar
 " Moita, Setúbal",T2,890,75,1,Renovado,moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T6,7000,402,4,Usado,moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T5,2850,163,4,Usado,moradia,arrendar
 " Santiago (Sesimbra), Sesimbra, Setúbal",T4,3050,264,4,"
 
 ",moradia,arrendar
-" Poceirão e Marateca, Palmela, Setúbal",T4,2850,253,2,"
-                                                                                                        Maxgroup                                                                                        ",moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T1,800,54,1,Renovado,moradia,arrendar
-" Quinta do Anjo, Palmela, Setúbal",T3,1700,"159,84",4,"
+" Poceirão e Marateca, Palmela, Setúbal",T2,1250,"138,10",3,Usado,moradia,arrendar
+" Azeitão (São Lourenço e São Simão), Setúbal",T3,2500,"201,10",2,"
 
 ",moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T4,1850,165,,Casas de Banho: 4 ou mais,moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T3,2400,160,2,Novo,moradia,arrendar
 " Castelo (Sesimbra), Sesimbra, Setúbal",T5,2500,168,4,Usado,moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T3,2500,"201,10",2,"
-                                                                                                        Remax Grupo Solução                                                                                        ",moradia,arrendar
 " Corroios, Seixal, Setúbal",T6,4500,"324,12",,"
 
 ",moradia,arrendar
 " Palmela, Setúbal",T2,900,108,,"
 
 ",moradia,arrendar
-" Fernão Ferro, Seixal, Setúbal",T4,1500,"133,23",3,Usado,moradia,arrendar
+" Corroios, Seixal, Setúbal",T5,1250,140,2,Usado,moradia,arrendar
+" Azeitão (São Lourenço e São Simão), Setúbal",T4,1650,"286,48",3,"
+
+",moradia,arrendar
+" Alhos Vedros, Moita, Setúbal",T4,1700,234,4,Usado,moradia,arrendar
 " Charneca de Caparica e Sobreda, Almada, Setúbal",T2,950,75,,"
 
 ",moradia,arrendar
 " Azeitão (São Lourenço e São Simão), Setúbal",T3,1500,160,2,Renovado,moradia,arrendar
 " Quinta do Anjo, Palmela, Setúbal",T3,1750,230,4,Novo,moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T3,1100,165,3,Usado,moradia,arrendar
 " Cercal, Santiago do Cacém, Setúbal",T3,1000,105,,"
 
 ",moradia,arrendar
@@ -901,126 +931,116 @@ local,rooms,price,area,restroom,status,kind,movel
 
 ",moradia,arrendar
 " Atalaia e Alto Estanqueiro-Jardia, Montijo, Setúbal",T4,2950,250,4,Usado,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T3,1200,95,,,moradia,arrendar
+" Montijo e Afonsoeiro, Montijo, Setúbal",T2,850,105,1,Usado,moradia,arrendar
 " Azeitão (São Lourenço e São Simão), Setúbal",T3,295000,179,2,Renovado,moradia,arrendar
 " Palmela, Setúbal",T10 ou superior,6000,350,,"
 
 ",moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T3,900,70,,Casas de Banho: 1,moradia,arrendar
 " Corroios, Seixal, Setúbal",T4,3000,160,3,Renovado,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T3,5500,280,,,moradia,arrendar
 " Sines, Setúbal",T3,2000,322,3,Usado,moradia,arrendar
 " Sines, Setúbal",T3,1100,90,1,Usado,moradia,arrendar
 " Sines, Setúbal",T4,2300,281,3,Renovado,moradia,arrendar
 " Sines, Setúbal",T6,1200,200,2,Usado,moradia,arrendar
 " Santiago (Sesimbra), Sesimbra, Setúbal",T3,1200,150,2,Usado,moradia,arrendar
 " Comporta, Alcácer do Sal, Setúbal",T2,2100,52,1,Usado,moradia,arrendar
+" Fernão Ferro, Seixal, Setúbal",T2,580,55,1,Usado,moradia,arrendar
 " Charneca de Caparica e Sobreda, Almada, Setúbal",T4,2500,190,3,Usado,moradia,arrendar
 " Amora, Seixal, Setúbal",T6,470000,192,4,Usado,moradia,arrendar
 " Almada, Cova da Piedade, Pragal e Cacilhas, Almada, Setúbal",T3,950,82,1,Renovado,moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T2,750,60,1,"
+" Santiago do Cacém, Santa Cruz e São Bartolomeu da Serra, Santiago do Cacém, Setúbal",T1,600,"61,56",1,Novo,moradia,arrendar
+" Santo André, Santiago do Cacém, Setúbal",T0,450,35,,"
+
 ",moradia,arrendar
 " Charneca de Caparica e Sobreda, Almada, Setúbal",T2,780,60,1,Novo,moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T4,1500,143,3,Usado,moradia,arrendar
 " Sines, Setúbal",T4,,"106,50",2,Usado,moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T3,1200,95,,,moradia,arrendar
-" Setúbal (São Julião, Nossa Senhora da Anunciada e Santa Maria da Graça), Setúbal",T1,850,"79,16",1,Usado,moradia,arrendar
 " Quinta do Conde, Sesimbra, Setúbal",T2,550,65,1,Renovado,moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T1,750,70,,"
-
-",moradia,arrendar
-" Montijo e Afonsoeiro, Montijo, Setúbal",T1,550,40,,,moradia,arrendar
-" Corroios, Seixal, Setúbal",T3,1200,100,2,"
-",moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T1,500,80,1,"
-                                            Anúncio particular                                    ",moradia,arrendar
-" Azeitão (São Lourenço e São Simão), Setúbal",T3,1800,200,3,Usado,moradia,arrendar
-" Costa da Caparica, Almada, Setúbal",T5,2000,125,2,"
-
-",moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T2,700,70,,,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T2,775,120,1,Usado,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T4,6500,200,,,moradia,arrendar
+" Costa da Caparica, Almada, Setúbal",T1,750,65,1,Renovado,moradia,arrendar
+" Setúbal (São Julião, Nossa Senhora da Anunciada e Santa Maria da Graça), Setúbal",T2,2000,280,1,Renovado,moradia,arrendar
 " Azeitão (São Lourenço e São Simão), Setúbal",T4,1400,180,4,Usado,moradia,arrendar
-" Abela, Santiago do Cacém, Setúbal",T2,450,80,1,Renovado,moradia,arrendar
-" Alcochete, Setúbal",T1,450,55,1,Renovado,moradia,arrendar
+" Sines, Setúbal",T3,1500,150,3,Usado,moradia,arrendar
 " Charneca de Caparica e Sobreda, Almada, Setúbal",T2,950,65,2,Usado,moradia,arrendar
-" Santiago (Sesimbra), Sesimbra, Setúbal",T3,1100,170,,"
-
-",moradia,arrendar
-" Charneca de Caparica e Sobreda, Almada, Setúbal",T2,600,32,1,Usado,moradia,arrendar
+" Amora, Seixal, Setúbal",T3,2000,150,2,Usado,moradia,arrendar
 " Charneca de Caparica e Sobreda, Almada, Setúbal",T5,5500,280,4,Renovado,moradia,arrendar
 " Azeitão (São Lourenço e São Simão), Setúbal",T4,1000,85,,"
 ",moradia,arrendar
-" Alcácer do Sal (Santa Maria do Castelo e Santiago) e Santa Susana, Alcácer do Sal, Setúbal",T2,1000,149,3,"
-
-",moradia,arrendar
-" Palmela, Setúbal",T3,1500,149,3,"
-                                                                                                        Collection Lounge                                                                                        ",moradia,arrendar
 " Palmela, Setúbal",T6,6000,500,4,Usado,moradia,arrendar
 " Santiago (Sesimbra), Sesimbra, Setúbal",T4,1500,146,4,Usado,moradia,arrendar
 " São Sebastião, Setúbal",T1,850,"79,16",1,Usado,moradia,arrendar
-" São Sebastião, Setúbal",T2,650,1002,1,Renovado,moradia,arrendar
-" Castelo (Sesimbra), Sesimbra, Setúbal",T1,300,30,1,Renovado,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T4,4000,170,,,moradia,arrendar
+" Charneca de Caparica e Sobreda, Almada, Setúbal",T6,7500,300,,,moradia,arrendar
 " Melides, Grândola, Setúbal",T3,1100,100,2,Renovado,moradia,arrendar
+" Palmela, Setúbal",T3,1500,149,3,"
+                                                                                                        Collection Lounge                                                                                        ",moradia,arrendar
 " Sines, Setúbal",T3,1500,100,1,Renovado,moradia,arrendar
 " Moita, Setúbal",T4,750,120,,"
 
 ",moradia,arrendar
 " Laranjeiro e Feijó, Almada, Setúbal",T4,950,140,1,Renovado,moradia,arrendar
-" Torrão, Alcácer do Sal, Setúbal",T4,485,"97,80",1,Para recuperar,moradia,arrendar
+" Torrão, Alcácer do Sal, Setúbal",T4,535,"97,80",1,Para recuperar,moradia,arrendar
+" Costa da Caparica, Almada, Setúbal",T4,1950,120,2,Renovado,moradia,arrendar
+" Santo André, Santiago do Cacém, Setúbal",T1,75,40,1,Renovado,moradia,arrendar
 " Santiago (Sesimbra), Sesimbra, Setúbal",T2,650,30,1,Usado,moradia,arrendar
-" Quinta do Anjo, Palmela, Setúbal",T1,730,50,1,Renovado,moradia,arrendar
-" Castelo (Sesimbra), Sesimbra, Setúbal",T3,,120,2,Usado,moradia,arrendar
-" Carreço, Viana do Castelo",T4,2500,233,4,"
-
-",moradia,arrendar
 " Viana do Castelo (Santa Maria Maior e Monserrate) e Meadela, Viana do Castelo",T1,450,43,1,Renovado,moradia,arrendar
 " Carreço, Viana do Castelo",T4,2500,"469,50",3,Usado,moradia,arrendar
 " Arca e Ponte de Lima, Ponte de Lima, Viana do Castelo",T3,750,212,3,"
+
+",moradia,arrendar
+" Carreço, Viana do Castelo",T4,2500,233,4,"
 
 ",moradia,arrendar
 " Lanhelas, Caminha, Viana do Castelo",T3,950,156,3,"
 
 ",moradia,arrendar
 " Darque, Viana do Castelo",T2,800,101,1,Usado,moradia,arrendar
+" Cabração e Moreira do Lima, Ponte de Lima, Viana do Castelo",T4,650,187,3,Renovado,moradia,arrendar
 " Viana do Castelo (Santa Maria Maior e Monserrate) e Meadela, Viana do Castelo",T2,800,120,2,Renovado,moradia,arrendar
 " Infesta, Paredes de Coura, Viana do Castelo",T3,1000,200,2,Usado,moradia,arrendar
 " Santa Marta de Portuzelo, Viana do Castelo",T4,790,360,3,"
 
 ",moradia,arrendar
+" Perre, Viana do Castelo",T5,1800,200,3,Renovado,moradia,arrendar
 " Viana do Castelo (Santa Maria Maior e Monserrate) e Meadela, Viana do Castelo",T3,700,93,2,"
 
 ",moradia,arrendar
 " Paredes de Coura e Resende, Paredes de Coura, Viana do Castelo",T3,550,180,1,Usado,moradia,arrendar
+" Cardielos e Serreleis, Viana do Castelo",T2,450,"86,80",1,Usado,moradia,arrendar
 " Formariz e Ferreira, Paredes de Coura, Viana do Castelo",T0,275,40,1,Renovado,moradia,arrendar
-" Valença, Cristelo Covo e Arão, Valença, Viana do Castelo",T1,280,60,1,Usado,moradia,arrendar
+" Fontoura, Valença, Viana do Castelo",T1,500,30,1,Novo,moradia,arrendar
 " Carreço, Viana do Castelo",T3,600,80,2,Usado,moradia,arrendar
-" Alvarães, Viana do Castelo",T3,850,134,2,Novo,moradia,arrendar
-" Pensalvos e Parada de Monteiros, Vila Pouca de Aguiar, Vila Real",T5,1100,197,2,Usado,moradia,arrendar
+" Pensalvos e Parada de Monteiros, Vila Pouca de Aguiar, Vila Real",T5,650,197,2,Usado,moradia,arrendar
 " Vilar de Nantes, Chaves, Vila Real",T4,275,350,3,"
 
 ",moradia,arrendar
+" Torgueda, Vila Real",T3,400,160,,,moradia,arrendar
 " Cabril, Montalegre, Vila Real",T3,350,100,1,"
 
 ",moradia,arrendar
 " Vreia de Bornes, Vila Pouca de Aguiar, Vila Real",T4,350,"159,66",2,"
 
 ",moradia,arrendar
-" Soutelo de Aguiar, Vila Pouca de Aguiar, Vila Real",T4,950,160,2,Usado,moradia,arrendar
-" Borbela e Lamas de Olo, Vila Real",T3,555,115,2,Renovado,moradia,arrendar
-" Murça, Vila Real",T3,250,72,2,Usado,moradia,arrendar
+" Santo Estevão, Chaves, Vila Real",T2,330,120,2,Renovado,moradia,arrendar
 " Vila Real (Nossa Senhora da Conceição, São Pedro e São Dinis), Vila Real",T3,600,100,2,Renovado,moradia,arrendar
-" Peso da Régua e Godim, Peso da Régua, Vila Real",T2,240,55,,"
+" Peso da Régua e Godim, Peso da Régua, Vila Real",T2,230,80,1,"
 
 ",moradia,arrendar
-" São João de Lourosa, Viseu",T3,450,200,2,Renovado,moradia,arrendar
+" Sapiãos, Boticas, Vila Real",T3,250,150,1,"
+
+",moradia,arrendar
 " Tarouquela, Cinfães, Viseu",T5,3250,138,2,"
 
 ",moradia,arrendar
+" Ribafeita, Viseu",T3,900,166,1,Usado,moradia,arrendar
 " Castelões, Tondela, Viseu",T2,500,90,1,"
 ",moradia,arrendar
 " Castelões, Tondela, Viseu",T1,550,"91,90",1,Usado,moradia,arrendar
 " Lamego (Almacave e Sé), Lamego, Viseu",T3,250,70,1,Usado,moradia,arrendar
- Viseu,T3,1000,210,4,Usado,moradia,arrendar
-" Abraveses, Viseu",T1,375,45,1,Usado,moradia,arrendar
-" Santa Cruz da Trapa e São Cristóvão de Lafões, São Pedro do Sul, Viseu",T1,250,80,1,Renovado,moradia,arrendar
-" Lamego (Almacave e Sé), Lamego, Viseu",T3,300,70,1,Usado,moradia,arrendar
-" Abraveses, Viseu",T3,590,115,1,Usado,moradia,arrendar
+ Viseu,T4,550,160,4,Usado,moradia,arrendar
+" Nelas, Viseu",T4,600,150,3,Renovado,moradia,arrendar
+" São João da Pesqueira e Várzea de Trevões, São João da Pesqueira, Viseu",T4,250000,1500,2,Novo,moradia,arrendar
+" Nelas, Viseu",T1,300,60,1,Usado,moradia,arrendar
 " Fragosela, Viseu",T3,450,200,2,Renovado,moradia,arrendar
+" Freixiosa, Mangualde, Viseu",T5,400,399,2,Usado,moradia,arrendar

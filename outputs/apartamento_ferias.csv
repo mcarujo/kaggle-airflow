@@ -1,0 +1,424 @@
+local,rooms,price,area,restroom,status,kind,movel
+" Glória e Vera Cruz, Aveiro",T2,140000,70,1,Usado,apartamento,ferias
+" Gafanha da Nazaré, Ílhavo, Aveiro",T1,,40,1,Renovado,apartamento,ferias
+" Apúlia e Fão, Esposende, Braga",T2,300,78,2,Usado,apartamento,ferias
+" Coimbra (Sé Nova, Santa Cruz, Almedina e São Bartolomeu), Coimbra",T1,350,54,1,Usado,apartamento,ferias
+" Coimbra (Sé Nova, Santa Cruz, Almedina e São Bartolomeu), Coimbra",T0,250,22,1,Renovado,apartamento,ferias
+" Coimbra (Sé Nova, Santa Cruz, Almedina e São Bartolomeu), Coimbra",T0,220,20,1,Renovado,apartamento,ferias
+" Coimbra (Sé Nova, Santa Cruz, Almedina e São Bartolomeu), Coimbra",T0,250,22,1,Renovado,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T1,350,60,1,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,228,76,1,14784 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,301,80,2,70442 /AL,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,658,90,3,108466 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,560,80,1,Usado,apartamento,ferias
+" Porches, Lagoa (Algarve), Faro",T2,395,75,,,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T2,350,100,2,Usado,apartamento,ferias
+" Guia, Albufeira, Faro",T1,315,50,1,Renovado,apartamento,ferias
+" Guia, Albufeira, Faro",T2,550,90,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,353,90,2,14482 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,425,97,2,28920 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,375,60,1,28921 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,610,100,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T0,290,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,710,100,1,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,760,109,2,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,710,109,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,560,70,1,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,490,107,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T3,875,160,3,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,525,80,2,Novo,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,645,55,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,490,73,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,320,61,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T3,630,80,3,Usado,apartamento,ferias
+" Almancil, Loulé, Faro",T2,1365,130,3,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,725,55,1,Usado,apartamento,ferias
+" Almancil, Loulé, Faro",T3,2940,200,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,595,130,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,490,89,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,490,90,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,425,100,1,90969 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,375,50,1,97710 /AL,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T2,490,100,,,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,1163,60,1,80873 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,1023,77,1,338 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,890,50,1,116468 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,2475,80,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,953,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,963,80,1,Usado,apartamento,ferias
+" Guia, Albufeira, Faro",T2,630,100,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,695,91,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T0,260,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T0,290,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,660,109,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,445,72,1,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T3,721,164,2,Renovado,apartamento,ferias
+" Portimão, Faro",T1,125,64,,Casas de Banho: 1,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,600,60,2,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,340,50,1,Renovado,apartamento,ferias
+" Faro (Sé e São Pedro), Faro",T2,259,76,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,5600,60,1,Novo,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,1500,120,2,Renovado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,350,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T0,2000,30,1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,791,72,2,43327 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,574,60,1,Novo,apartamento,ferias
+" Portimão, Faro",T0,245,45,1,10415/AL /AL,apartamento,ferias
+" Portimão, Faro",T1,210,65,1,68424 /AL,apartamento,ferias
+" Portimão, Faro",T0,210,45,1,Usado,apartamento,ferias
+" Tavira (Santa Maria e Santiago), Tavira, Faro",T3,400,110,,48711 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,29960,50,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,350,70,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,490,82,2,Usado,apartamento,ferias
+" Portimão, Faro",T1,245,55,1,Usado,apartamento,ferias
+" Guia, Albufeira, Faro",T2,,120,2,,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,1453,70,1,118148 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,1313,80,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,1180,60,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,753,80,1,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,883,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,1033,80,2,Usado,apartamento,ferias
+" Guia, Albufeira, Faro",T1,1793,70,1,Usado,apartamento,ferias
+" Budens, Vila do Bispo, Faro",T2,500,"79,66",2,Renovado,apartamento,ferias
+" Santa Luzia, Tavira, Faro",T0,650,30,1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,600,67,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,950,99,2,Novo,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T2,800,80,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,882,99,1,Usado,apartamento,ferias
+" Portimão, Faro",T2,,78,1,31658 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,882,"52,10",1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,1200,"70,50",1,Renovado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,749,60,1,53185 /AL,apartamento,ferias
+" Alvor, Portimão, Faro",T3,2200,94,2,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,412,101,2,85039 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,338,85,2,81318 /AL,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T3,331,130,2,97903 /AL,apartamento,ferias
+" Alcantarilha e Pêra, Silves, Faro",T1,953,60,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T1,425,60,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,,101,,"
+
+",apartamento,ferias
+" Portimão, Faro",T1,210,65,10096,"
+",apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,,131,,"
+
+",apartamento,ferias
+" Quarteira, Loulé, Faro",T1,480,85,,,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,550,100,234566,"
+                                                                                                        Particular                                                                                        ",apartamento,ferias
+" Quarteira, Loulé, Faro",T3,1330,100,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,700,60,1,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,525,50,2,Renovado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,980,70,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,39970,90,2,Usado,apartamento,ferias
+" Guia, Albufeira, Faro",T2,980,90,2,Renovado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T0,495,40,2,Usado,apartamento,ferias
+" Portimão, Faro",T1,350,45,1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,6650,80,1,53914 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,7000,80,2,99205 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,525,93,2,Novo,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,29960,60,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,595,135,2,Usado,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T1,210,45,2,Usado,apartamento,ferias
+" Portimão, Faro",T1,210,65,1,Renovado,apartamento,ferias
+" Almancil, Loulé, Faro",T2,580,110,2,Renovado,apartamento,ferias
+" Portimão, Faro",T1,210,60,1,10868 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,679,60,1,26570 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,602,60,1,42401 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,700,111,,82028 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,980,80,2,99205 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,791,62,1,57188 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,5705,60,1,26570 /AL,apartamento,ferias
+" Portimão, Faro",T0,245,45,1,Usado,apartamento,ferias
+" Portimão, Faro",T0,210,40,1,Usado,apartamento,ferias
+" Portimão, Faro",T0,245,40,1,Usado,apartamento,ferias
+" Tavira (Santa Maria e Santiago), Tavira, Faro",T1,29960,50,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T1,560,60,1,Renovado,apartamento,ferias
+" Luz, Lagos, Faro",T0,340,"56,68",1,Renovado,apartamento,ferias
+" Luz, Lagos, Faro",T0,340,"53,88",1,Renovado,apartamento,ferias
+" Luz, Lagos, Faro",T0,340,"62,37",1,Renovado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,495,125,2,Usado,apartamento,ferias
+" Luz, Lagos, Faro",T0,340,54,1,Renovado,apartamento,ferias
+" Luz, Lagos, Faro",T1,240,62,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,530,115,2,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T1,375,105,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,575,133,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,750,75,,88624 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,700,113,3,"
+
+",apartamento,ferias
+" Quarteira, Loulé, Faro",T2,700,111,3,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,700,114,3,"
+
+",apartamento,ferias
+" Quarteira, Loulé, Faro",T1,380,45,1,Usado,apartamento,ferias
+" Santa Luzia, Tavira, Faro",T0,24990,40,1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,39970,50,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,29960,50,1,Novo,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,24990,50,1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T2,44940,80,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T0,350,35,1,Renovado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T0,350,35,1,Renovado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,44940,70,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,24990,55,1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,210,"54,89",1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,265,42,1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T2,300,"63,54",1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T2,450,"57,44",1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T2,300,"63,70",1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,400,"54,72",1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T2,300,"60,14",1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T2,325,"65,51",1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,350,65,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,710,80,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,525,65,1,Usado,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T1,295,60,,,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T3,595,90,2,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,355,30,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,,80,2,Usado,apartamento,ferias
+" Alcantarilha e Pêra, Silves, Faro",T1,953,60,1,Usado,apartamento,ferias
+" Alcantarilha e Pêra, Silves, Faro",T1,953,60,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,497,37,1,29098 /AL,apartamento,ferias
+" Santa Luzia, Tavira, Faro",T0,650,30,1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,500,72,,82115 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,,"59,64",1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,,112,3,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,,50,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,700,111,,82028 /AL,apartamento,ferias
+" Luz de Tavira e Santo Estêvão, Tavira, Faro",T2,1050,100,,012233 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T3,,120,2,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T4,,110,3,Novo,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,490,74,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,810,133,2,Renovado,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T2,490,100,2,Novo,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T1,350,70,1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,350,58,,16558 /AL,apartamento,ferias
+" Guia, Albufeira, Faro",T2,560,70,1,101022 /AL,apartamento,ferias
+" Faro (Sé e São Pedro), Faro",T2,301,97,2,61453 /AL,apartamento,ferias
+" Portimão, Faro",T1,245,60,7232,"
+",apartamento,ferias
+" Altura, Castro Marim, Faro",T3,450,"88,18",2,Novo,apartamento,ferias
+" Portimão, Faro",T1,245,65,20921,"
+",apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T1,,34,,"
+
+",apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T0,495,40,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,350,70,1,Usado,apartamento,ferias
+" Alcantarilha e Pêra, Silves, Faro",T1,953,60,1,Usado,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T1,,"51,40",1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T2,,80,1,Novo,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,600,87,,76908 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,265,42,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,265,50,1,Usado,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T2,350,90,77189,"
+
+",apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T2,850,80,3,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,910,80,1,39947 /AL,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T1,280,45,1,Usado,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T0,175,35,1,Usado,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T0,210,40,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,350,80,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,350,60,1,Usado,apartamento,ferias
+" Alcantarilha e Pêra, Silves, Faro",T1,953,60,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,910,80,2,26642 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,6258,80,2,26642 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,5705,60,1,42401 /AL,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T2,350,75,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,450,90,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,300,60,1,Usado,apartamento,ferias
+" Vila Real de Santo António, Faro",T2,300,85,1,Usado,apartamento,ferias
+" Vila Real de Santo António, Faro",T1,300,70,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,300,65,1,Usado,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T2,500,80,1,Usado,apartamento,ferias
+" Vila Real de Santo António, Faro",T2,350,80,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,450,90,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,400,80,,Casas de Banho: 1,apartamento,ferias
+" Conceição e Cabanas de Tavira, Tavira, Faro",T1,350,75,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,450,80,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,660,100,1,Renovado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,265,40,1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T3,500,90,2,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T2,500,90,2,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,210,"56,59",1,Usado,apartamento,ferias
+" Tavira (Santa Maria e Santiago), Tavira, Faro",T1,375,"59,37",1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,490,95,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,525,80,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,515,80,2,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,500,75,1,Renovado,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,378,60,1,Novo,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,240,"52,51",1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,350,75,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T3,350,75,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,6916,60,1,111712 /AL,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,609,60,1,51341 /AL,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,400,105,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,,50,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T1,350,80,1,Usado,apartamento,ferias
+" Almancil, Loulé, Faro",T3,1505,150,4,"
+
+",apartamento,ferias
+" Almancil, Loulé, Faro",T2,1505,150,3,"
+
+",apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,400,50,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,,70,1,Novo,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,,70,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,350,60,1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T2,44940,70,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,29960,55,2,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T2,760,109,2,Renovado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,300,"36,13",1,Novo,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,95,95,1,Novo,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,420,"42,98",1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,300,"39,72",1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,265,52,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,679,60,1,53185 /AL,apartamento,ferias
+" Santa Luzia, Tavira, Faro",T2,800,80,2,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,,80,2,Novo,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,,72,2,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,850,80,1,Usado,apartamento,ferias
+" São Gonçalo de Lagos, Lagos, Faro",T2,250,115,2,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,250,"51,56",1,Novo,apartamento,ferias
+" Armação de Pêra, Silves, Faro",T2,350,90,15717,"
+
+",apartamento,ferias
+" Guia, Albufeira, Faro",T1,400,60,,"
+
+",apartamento,ferias
+" Lagoa e Carvoeiro, Lagoa (Algarve), Faro",T2,700,116,2,26226/AL /AL,apartamento,ferias
+" Portimão, Faro",T2,650,110,,Casas de Banho: 2,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,300,65,1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T2,550,80,1,Usado,apartamento,ferias
+" Albufeira e Olhos de Água, Albufeira, Faro",T0,600,87,,76908 /AL,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,300,"43,91",1,Usado,apartamento,ferias
+" Quarteira, Loulé, Faro",T0,5460,60,1,39947 /AL,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T0,300,40,1,Usado,apartamento,ferias
+" Altura, Castro Marim, Faro",T1,200,"48,50",1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,250,"59,36",1,Novo,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,700,80,1,Usado,apartamento,ferias
+" Vila Nova de Cacela, Vila Real de Santo António, Faro",T1,,50,1,012233 /AL,apartamento,ferias
+" Quarteira, Loulé, Faro",T1,602,60,1,42401 /AL,apartamento,ferias
+" Portimão, Faro",T1,600,70,1,Usado,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T1,,45,1,Novo,apartamento,ferias
+" Monte Gordo, Vila Real de Santo António, Faro",T2,650,90,,28920 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,400,70,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,400,85,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T0,250,30,,Casas de Banho: 1,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,335,55,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T0,250,28,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,300,65,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,230,73,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,280,89,,71944 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,280,79,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,360,107,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,380,80,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,375,70,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,350,50,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,550,97,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,450,85,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,325,49,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T4,450,95,,75418 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,320,"59,70",1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,450,75,,98048 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,425,75,1,97922 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,350,75,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,290,62,1,97918 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,335,55,,Casas de Banho: 1,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,380,90,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,600,110,2,98211 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,450,90,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,275,35,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,550,110,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,300,52,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,450,92,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,500,110,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,400,102,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,625,110,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,400,85,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,395,75,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,400,85,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,350,45,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,400,85,,75424 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,195,90,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,475,105,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T4,325,99,2,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,325,49,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,475,105,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,395,78,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,625,110,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,350,45,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,395,70,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T0,225,45,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,275,50,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,250,58,1,33787 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,375,67,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,400,105,2,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,275,75,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,395,90,1,32460 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,195,37,,33783 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,,66,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,300,65,1,Renovado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,400,97,2,98041 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,295,77,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,225,70,2,98193 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,175,35,1,33783 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,190,60,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T0,90,45,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T2,400,85,1,Usado,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T1,200,90,1,97918 /AL,apartamento,ferias
+" São Martinho do Porto, Alcobaça, Leiria",T3,300,66,75424,"
+
+",apartamento,ferias
+" Silveira, Torres Vedras, Lisboa",T1,400,60,1,114328 /AL,apartamento,ferias
+" Carcavelos e Parede, Cascais, Lisboa",T1,735,90,1,Renovado,apartamento,ferias
+" Moscavide e Portela, Loures, Lisboa",T1,770,100,1,Novo,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,840,100,2,Renovado,apartamento,ferias
+" Campo de Ourique, Lisboa",T1,420,55,1,Usado,apartamento,ferias
+" São Domingos de Benfica, Lisboa",T1,420,65,1,Usado,apartamento,ferias
+" Silveira, Torres Vedras, Lisboa",T2,565,85,1,116119 /AL,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,480,50,1,28378 /AL,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,830,100,2,110720 /AL,apartamento,ferias
+" Carvoeira, Mafra, Lisboa",T2,730,90,1,77844 /AL,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,600,66,1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,450,80,1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,600,91,1,Usado,apartamento,ferias
+" Carvoeira, Mafra, Lisboa",T2,450,60,1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,350,60,1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,450,66,1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,600,"124,50",1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,750,107,3,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,500,65,1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,770,60,1,Renovado,apartamento,ferias
+" Cascais e Estoril, Cascais, Lisboa",T2,1008,70,1,Renovado,apartamento,ferias
+" Cascais e Estoril, Cascais, Lisboa",T3,,135,3,"
+
+",apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,600,75,2,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T0,490,35,1,Renovado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,410,60,1,115650 /AL,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T0,335,50,1,115650 /AL,apartamento,ferias
+" Silveira, Torres Vedras, Lisboa",T1,520,70,1,115558 /AL,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,980,100,1,Renovado,apartamento,ferias
+" Odivelas, Lisboa",T2,500,75,1,Renovado,apartamento,ferias
+" Cascais e Estoril, Cascais, Lisboa",T2,861,130,3,Renovado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,450,"34,65",1,Usado,apartamento,ferias
+" Ericeira, Mafra, Lisboa",T1,350,40,1,Usado,apartamento,ferias
+" Carcavelos e Parede, Cascais, Lisboa",T1,,75,1,"
+
+",apartamento,ferias
+" Ericeira, Mafra, Lisboa",T2,610,180,2,115650 /AL,apartamento,ferias
+" Arroios, Lisboa",T1,343,25,1,Renovado,apartamento,ferias
+" Arroios, Lisboa",T2,490,75,1,Renovado,apartamento,ferias
+" Penha de França, Lisboa",T2,490,70,1,81896/AL /AL,apartamento,ferias
+" Arroios, Lisboa",T1,340,25,1,Renovado,apartamento,ferias
+" Campo de Ourique, Lisboa",T2,420,60,1,Renovado,apartamento,ferias
+" Arroios, Lisboa",T2,490,78,1,81896 /AL,apartamento,ferias
+" Póvoa de Varzim, Beiriz e Argivai, Povoa de Varzim, Porto",T2,,90,2,Renovado,apartamento,ferias
+" Vila do Conde, Porto",T1,400,100,3220,"
+                                            Anúncio particular                                    ",apartamento,ferias
+" Costa da Caparica, Almada, Setúbal",T1,550,55,1,Usado,apartamento,ferias
+" Costa da Caparica, Almada, Setúbal",T2,550,80,1,Usado,apartamento,ferias
+" Santiago (Sesimbra), Sesimbra, Setúbal",T2,500,70,,13269 /AL,apartamento,ferias
+" Chafé, Viana do Castelo",T1,,60,1,Usado,apartamento,ferias
