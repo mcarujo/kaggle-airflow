@@ -1,5 +1,5 @@
 # airflow-examples
-Airflow scripts + Docker (For Academic reason)
+Airflow scripts + Docker 
 ```
 mkdir -p ./dags ./logs ./plugins
 echo -e "AIRFLOW_UID=$(id -u)" > .env
