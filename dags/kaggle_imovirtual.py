@@ -1,11 +1,18 @@
-from datetime import datetime, timedelta
+import logging
+import os
+from datetime import timedelta
 
 import airflow
 from airflow import DAG
+from airflow.models import Variable
 from airflow.operators.python_operator import PythonOperator
 from airflow.sensors.http_sensor import HttpSensor
-
-from functions.kaggle_imovirtual_functions import download_process_store
+from functions.kaggle_operator import KaggleDatasetPush
+from functions.kaggle_imovirtual_functions import (
+    create_output_path,
+    extract_by_type,
+    format_transform_consolidate,
+)
 
 # SETTINGS
 default_args = {
@@ -19,7 +26,10 @@ default_args = {
     "retry_delay": timedelta(minutes=5),
 }
 
+
 with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args) as dag:
+    OUTPUT_PATH = os.path.join(Variable.get("ROOT_OUTPUT_PATH"), "imovirtual")
+    logging.info("Using OUTPUT_PATH as %s", OUTPUT_PATH)
 
     is_imovirtual_available = HttpSensor(
         task_id="is_imovirtual_available",
@@ -31,8 +41,47 @@ with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args)
         timeout=20,
     )
 
-    do_download_process_store = PythonOperator(
-        task_id="do_download_process_store", python_callable=download_process_store
+    task_create_output_path = PythonOperator(
+        task_id="task_create_output_path",
+        python_callable=create_output_path,
+        op_kwargs={"output_path": OUTPUT_PATH},
     )
 
-    is_imovirtual_available >> do_download_process_store
+    tasks_download_process_in_parallel = []
+    for residence_type in ["moradia", "apartamento"]:  # house or apartment
+        for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
+            tasks_download_process_in_parallel.append(
+                PythonOperator(
+                    task_id=f"extraction_{residence_type}_{service_type}",
+                    python_callable=extract_by_type,
+                    op_kwargs={
+                        "residence_type": residence_type,
+                        "service_type": service_type,
+                        "output_path": OUTPUT_PATH,
+                        "time_sleep": 4,  # to avoid ip block
+                    },
+                )
+            )
+
+    task_format_transform_consolidate = PythonOperator(
+        task_id="task_format_transform_consolidate",
+        python_callable=format_transform_consolidate,
+        op_kwargs={
+            "output_path": OUTPUT_PATH,
+            "file_name": "portugal_ads_proprieties.csv",
+        },
+    )
+    task_push_to_kaggle = KaggleDatasetPush(
+        task_id="task_push_to_kaggle",
+        kaggle_dataset="portugal-proprieties-rent-buy-and-vacation",
+        kaggle_username="mcarujo",
+        file_name="portugal_ads_proprieties.csv",
+        output_path=OUTPUT_PATH,
+    )
+    (
+        is_imovirtual_available
+        >> task_create_output_path
+        >> tasks_download_process_in_parallel
+        >> task_format_transform_consolidate
+        >> task_push_to_kaggle
+    )
