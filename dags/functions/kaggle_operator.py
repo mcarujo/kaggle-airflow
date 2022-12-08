@@ -33,13 +33,10 @@ class KaggleDatasetPush(BaseOperator):
         )
         api = kaggle.api
         api.dataset_metadata(
-            dataset_path,
             self.kaggle_dataset,
+            dataset_path,
         )
         timestamp = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
         api.dataset_create_version(
             dataset_path, f"Updated using airflow at {timestamp}"
         )
-
-
-# mcarujo/portugal-proprieties-rent-buy-and-vacation

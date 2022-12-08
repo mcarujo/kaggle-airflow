@@ -10,7 +10,7 @@ from airflow.sensors.http_sensor import HttpSensor
 from functions.kaggle_operator import KaggleDatasetPush
 from functions.kaggle_imovirtual_functions import (
     create_output_path,
-    extract_by_type,
+    serialize_extraction,
     format_transform_consolidate,
 )
 
@@ -47,21 +47,13 @@ with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args)
         op_kwargs={"output_path": OUTPUT_PATH},
     )
 
-    tasks_download_process_in_parallel = []
-    for residence_type in ["moradia", "apartamento"]:  # house or apartment
-        for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
-            tasks_download_process_in_parallel.append(
-                PythonOperator(
-                    task_id=f"extraction_{residence_type}_{service_type}",
-                    python_callable=extract_by_type,
-                    op_kwargs={
-                        "residence_type": residence_type,
-                        "service_type": service_type,
-                        "output_path": OUTPUT_PATH,
-                        "time_sleep": 4,  # to avoid ip block
-                    },
-                )
-            )
+    tasks_download_process_in_series = PythonOperator(
+        task_id="tasks_download_process_in_series",
+        python_callable=serialize_extraction,
+        op_kwargs={
+            "output_path_folder": OUTPUT_PATH,
+        },
+    )
 
     task_format_transform_consolidate = PythonOperator(
         task_id="task_format_transform_consolidate",
@@ -81,7 +73,7 @@ with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args)
     (
         is_imovirtual_available
         >> task_create_output_path
-        >> tasks_download_process_in_parallel
+        >> tasks_download_process_in_series
         >> task_format_transform_consolidate
         >> task_push_to_kaggle
     )

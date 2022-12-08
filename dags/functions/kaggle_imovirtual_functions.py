@@ -132,6 +132,12 @@ def get_html_as_bs(region: tuple, page: str, service_type: str, residence_type: 
     return BeautifulSoup(response.text)
 
 
+def serialize_extraction(output_path_folder: str):
+    for residence_type in ["moradia", "apartamento"]:  # house or apartment
+        for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
+            extract_by_type(service_type, residence_type, output_path_folder)
+
+
 def extract_by_type(
     service_type: str, residence_type: str, output_path: str, time_sleep: int = 1
 ):
