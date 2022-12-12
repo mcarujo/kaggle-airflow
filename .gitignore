@@ -131,3 +131,4 @@ dmypy.json
 # User customization
 outputs
 *.ipynb
+.vscode

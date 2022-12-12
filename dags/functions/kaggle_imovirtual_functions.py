@@ -1,3 +1,7 @@
+"""
+Helper file for imovirtual DAG.
+"""
+
 import logging
 import os
 import re
@@ -10,18 +14,27 @@ import requests
 from bs4 import BeautifulSoup
 
 
-### Extraction
-def get_info_from_article(article):
-    h = dict()
-    h["local"] = article.find("p", class_="text-nowrap").text.split(":")[1]
+def get_info_from_article(article: BeautifulSoup) -> dict:
+    """
+    Receive a soup object and html then return in a dict the data.
 
-    h["rooms"] = article.find("li", class_="offer-item-rooms hidden-xs").text
+    Args:
+        article (BeautifulSoup): soup object that contains the ads html.
 
-    h["price"] = article.find("li", class_="offer-item-price").text
-    h["price"] = re.sub("[^0-9]", "", h["price"])
+    Returns:
+        dict: information related to the announcement.
+    """
 
-    h["area"] = article.find("li", class_="hidden-xs offer-item-area").text
-    h["area"] = re.sub("[m² ]", "", h["area"])
+    residence = dict()
+    residence["local"] = article.find("p", class_="text-nowrap").text.split(":")[1]
+
+    residence["rooms"] = article.find("li", class_="offer-item-rooms hidden-xs").text
+
+    residence["price"] = article.find("li", class_="offer-item-price").text
+    residence["price"] = re.sub("[^0-9]", "", residence["price"])
+
+    residence["area"] = article.find("li", class_="hidden-xs offer-item-area").text
+    residence["area"] = re.sub("[m² ]", "", residence["area"])
 
     try:
         aux = [
@@ -31,7 +44,7 @@ def get_info_from_article(article):
             )
         ]
 
-    except:
+    except NameError:
         aux = [
             li.text
             for li in article.find(
@@ -39,27 +52,34 @@ def get_info_from_article(article):
             ).find_all("li")
         ]
     try:
-        h["restroom"] = aux[0]
-        h["restroom"] = re.sub("[^0-9]", "", h["restroom"])
-    except:
-        h["restroom"] = None
+        residence["restroom"] = re.sub("[^0-9]", "", aux[0])
+    except NameError:
+        residence["restroom"] = None
 
     try:
-        h["status"] = aux[1]
-    except:
-        None
+        residence["status"] = aux[1]
+    except NameError:
+        residence["status"] = np.nan
 
-    return h
+    return residence
 
 
-def get_info_from_page(soup):
+def get_info_from_page(soup: BeautifulSoup) -> list:
+    """Create a list of ads for each page.
+
+    Args:
+        soup (BeautifulSoup): html of a page that contains a list of ads.
+
+    Returns:
+        list: returns a list of dict with the ad information.
+    """
     articles = soup.find_all("article")
     aux = []
     for index, article in enumerate(articles):
         try:
             aux.append(get_info_from_article(article))
-        except:
-            pass
+        except NameError:
+            logging.info("Error to get article index %s", index)
     return aux
 
 
@@ -103,14 +123,25 @@ def get_regions():
     ]
 
 
-def get_number_of_pages(soup):
+def get_number_of_pages(soup: BeautifulSoup) -> int:
+    """
+    Catch the information of how many pages of ad for that area.
+
+    Args:
+        soup (BeautifulSoup): soup object that contains the html.
+
+    Returns:
+        int: The number of pages, in case of issue returns 1.
+    """
     try:
         return int(soup.find("ul", class_="pager").find_all("li")[-2].text)
-    except:
+    except NameError:
         return 1
 
 
-def get_html_as_bs(region: tuple, page: str, service_type: str, residence_type: str):
+def get_html_as_bs(
+    region: tuple, page: str, service_type: str, residence_type: str
+) -> BeautifulSoup:
     """
     Execute a request to the website then use the html to instantiate a BeautifulSoup object.
 
@@ -126,13 +157,21 @@ def get_html_as_bs(region: tuple, page: str, service_type: str, residence_type: 
     space = " "
     dash = "-"
     response = requests.get(
-        f"https://www.imovirtual.com/{service_type}/{residence_type}/{region[0].lower().replace(space,dash)}/?search%5Bregion_id%5D={region[1]}&nrAdsPerPage=72&page={page}",
+        f"https://www.imovirtual.com/{service_type}/{residence_type}"
+        + f"/{region[0].lower().replace(space,dash)}"
+        + f"/?search%5Bregion_id%5D={region[1]}&nrAdsPerPage=72&page={page}",
         timeout=120,
     )
     return BeautifulSoup(response.text)
 
 
-def serialize_extraction(output_path_folder: str):
+def serialize_extraction(output_path_folder: str) -> None:
+    """
+    Start the data extraction process based on residence and service type.
+
+    Args:
+        output_path_folder (str): path to store the partial csv.
+    """
     for residence_type in ["moradia", "apartamento"]:  # house or apartment
         for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
             extract_by_type(service_type, residence_type, output_path_folder)
@@ -140,7 +179,7 @@ def serialize_extraction(output_path_folder: str):
 
 def extract_by_type(
     service_type: str, residence_type: str, output_path: str, time_sleep: int = 1
-):
+) -> None:
     """
     Extract the data from imovirtual page based on service and residence type
     then store a DataFrame in the output folder specified.
@@ -161,7 +200,7 @@ def extract_by_type(
     regions = get_regions()
     for region in regions:
         max_pages = get_number_of_pages(
-            get_html_as_bs(region, 1, service_type, residence_type)
+            get_html_as_bs(region, "1", service_type, residence_type)
         )
         logging.info(
             "Total of %s pages for the %s region considering %s - %s.",
@@ -195,7 +234,7 @@ def create_output_path(output_path: str):
     Function to create the output if not exists.
 
     Args:
-        output_path (string): output folder name.
+        output_path (str): output folder name.
     """
     if os.path.exists(output_path):
         logging.info(
@@ -207,7 +246,16 @@ def create_output_path(output_path: str):
     logging.info("The output path '%s' has been created empty.", output_path)
 
 
-def format_transform_consolidate(output_path: str, file_name: str):
+def format_transform_consolidate(output_path: str, file_name: str) -> None:
+    """Load all partials csv into one, format it and then store it.
+
+    Args:
+        output_path (str): path to store the final csv.
+        file_name (str): name for the final csv.
+
+    Returns:
+        None: no return.
+    """
     paths_df = os.listdir(output_path)
     list_df = pd.concat(
         [pd.read_csv(os.path.join(output_path, path_df)) for path_df in paths_df]
@@ -225,14 +273,13 @@ def format_transform_consolidate(output_path: str, file_name: str):
     list_df.Price = list_df.Price.apply(float).round(2)
     list_df.Rooms = list_df.Rooms.apply(lambda x: x.replace("T", ""))
 
-    def format_bathrooms(x):
+    def format_bathrooms(quantity_bathrooms):
         try:
-            bathrooms = int(x)
+            bathrooms = int(quantity_bathrooms)
             if bathrooms > 100:
                 return np.nan
-            else:
-                return bathrooms
-        except:
+            return bathrooms
+        except NameError:
             return np.nan
 
     list_df.Bathrooms = list_df.Bathrooms.apply(format_bathrooms)
@@ -257,7 +304,7 @@ def format_transform_consolidate(output_path: str, file_name: str):
     )
     list_df.ProprietyType = list_df.ProprietyType.map(
         {
-            "apartamento": "Apartament",
+            "apartamento": "Apartment",
             "moradia": "House",
         }
     )

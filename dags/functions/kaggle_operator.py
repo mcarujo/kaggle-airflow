@@ -1,3 +1,6 @@
+"""
+Kaggle Operator for Airflow.
+"""
 import os
 import shutil
 from datetime import datetime
@@ -8,6 +11,10 @@ from airflow.models.baseoperator import BaseOperator
 
 
 class KaggleDatasetPush(BaseOperator):
+    """
+    Class to create new dataset version directly from the Airflow into Kaggle.
+    """
+
     def __init__(
         self,
         kaggle_dataset: str,
@@ -22,7 +29,10 @@ class KaggleDatasetPush(BaseOperator):
         self.file_name = file_name
         self.output_path = output_path
 
-    def execute(self, context):
+    def execute(self):
+        """
+        Creates the path to upload the dataset, download the metadata and push it.
+        """
         dataset_path = os.path.join(self.output_path, self.kaggle_dataset)
         if os.path.exists(dataset_path):
             shutil.rmtree(dataset_path)

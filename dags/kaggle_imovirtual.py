@@ -1,3 +1,6 @@
+"""
+DAG for https://www.kaggle.com/datasets/mcarujo/portugal-proprieties-rent-buy-and-vacation
+"""
 import logging
 import os
 from datetime import timedelta
