@@ -6,7 +6,6 @@ import shutil
 from datetime import datetime
 
 import kaggle
-from airflow.models import Variable
 from airflow.models.baseoperator import BaseOperator
 
 
@@ -29,7 +28,7 @@ class KaggleDatasetPush(BaseOperator):
         self.file_name = file_name
         self.output_path = output_path
 
-    def execute(self):
+    def execute(self, context):
         """
         Creates the path to upload the dataset, download the metadata and push it.
         """
