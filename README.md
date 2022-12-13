@@ -5,13 +5,12 @@
 
 Using the Airflow documentation s reference, it's only necessary to run the following commands and make some environmental adjustments regarding the access keys and other secrets. 😁
 
-```
-mkdir -p ./dags ./logs ./plugins
+```bash
+mkdir -p ./dags ./logs ./plugins 
 echo -e "AIRFLOW_UID=$(id -u)" > .env
 docker compose up airflow-init
 docker-compose up -d
 ```
-
 
 ## The goal
 Extract data from different sources, transform them and load them at Kaggle plataform (ETL).
