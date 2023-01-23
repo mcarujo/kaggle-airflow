@@ -8,8 +8,8 @@ from datetime import timedelta
 import airflow
 from airflow import DAG
 from airflow.models import Variable
-from airflow.operators.python_operator import PythonOperator
-from airflow.sensors.http_sensor import HttpSensor
+from airflow.operators.python import PythonOperator
+from airflow.providers.http.sensors.http import HttpSensor
 from functions.kaggle_operator import KaggleDatasetPush
 from functions.kaggle_imovirtual_functions import (
     create_output_path,
