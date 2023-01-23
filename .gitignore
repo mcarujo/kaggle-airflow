@@ -130,5 +130,6 @@ dmypy.json
 
 # User customization
 outputs
-*.ipynb
 .vscode
+*.csv
+.kaggle

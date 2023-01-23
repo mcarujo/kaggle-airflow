@@ -44,7 +44,7 @@ def get_info_from_article(article: BeautifulSoup) -> dict:
             )
         ]
 
-    except NameError:
+    except:
         aux = [
             li.text
             for li in article.find(
@@ -53,12 +53,12 @@ def get_info_from_article(article: BeautifulSoup) -> dict:
         ]
     try:
         residence["restroom"] = re.sub("[^0-9]", "", aux[0])
-    except NameError:
+    except:
         residence["restroom"] = None
 
     try:
         residence["status"] = aux[1]
-    except NameError:
+    except:
         residence["status"] = np.nan
 
     return residence
@@ -78,7 +78,7 @@ def get_info_from_page(soup: BeautifulSoup) -> list:
     for index, article in enumerate(articles):
         try:
             aux.append(get_info_from_article(article))
-        except NameError:
+        except:
             logging.info("Error to get article index %s", index)
     return aux
 
@@ -135,7 +135,7 @@ def get_number_of_pages(soup: BeautifulSoup) -> int:
     """
     try:
         return int(soup.find("ul", class_="pager").find_all("li")[-2].text)
-    except NameError:
+    except:
         return 1
 
 
@@ -162,7 +162,7 @@ def get_html_as_bs(
         + f"/?search%5Bregion_id%5D={region[1]}&nrAdsPerPage=72&page={page}",
         timeout=120,
     )
-    return BeautifulSoup(response.text)
+    return BeautifulSoup(response.text, features="lxml")
 
 
 def serialize_extraction(output_path_folder: str) -> None:
@@ -279,7 +279,7 @@ def format_transform_consolidate(output_path: str, file_name: str) -> None:
             if bathrooms > 100:
                 return np.nan
             return bathrooms
-        except NameError:
+        except:
             return np.nan
 
     list_df.Bathrooms = list_df.Bathrooms.apply(format_bathrooms)
