@@ -25,6 +25,7 @@ class OneFootballOperator(BaseOperator):
         competition_name: str,
         output_path: str,
         chromedriver_path: str,
+        n_jobs: int = 1,
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -32,6 +33,7 @@ class OneFootballOperator(BaseOperator):
         self.competition_name = competition_name
         self.output_path = output_path
         self.chromedriver_path = chromedriver_path
+        self.n_jobs = n_jobs
 
     def execute(self, **kwargs):
         """
@@ -71,7 +73,7 @@ class OneFootballOperator(BaseOperator):
         time.sleep(5)
         page = driver.page_source
         driver.close()
-        return BeautifulSoup(page)
+        return BeautifulSoup(page, features="lxml")
 
     def get_html_full_match(self, url):
         driver = self.__browser(url)
@@ -82,7 +84,7 @@ class OneFootballOperator(BaseOperator):
         time.sleep(5)
         page = driver.page_source
         driver.close()
-        return BeautifulSoup(page)
+        return BeautifulSoup(page, features="lxml")
 
     def __get_html_from_a_match(self, url):
         driver = self.__browser(url)
@@ -105,7 +107,9 @@ class OneFootballOperator(BaseOperator):
         time.sleep(1)
         second_lineup = driver.page_source
         driver.close()
-        return BeautifulSoup(page), BeautifulSoup(second_lineup)
+        return BeautifulSoup(page, features="lxml"), BeautifulSoup(
+            second_lineup, features="lxml"
+        )
 
     def __format_field(self, string):
         string = str(string)
@@ -321,7 +325,7 @@ class OneFootballOperator(BaseOperator):
             return {**match, **match_info}
 
         print("Starting the data extraction per match")
-        aux_list = Parallel(n_jobs=6, verbose=10)(
+        aux_list = Parallel(n_jobs=self.n_jobs, backend="threading", verbose=10)(
             delayed(merge_information)(match) for match in matches
         )
 
@@ -472,6 +476,9 @@ class OneFootballOperator(BaseOperator):
 
     def __store(self, df_matches, df_event, dataset_name, dataset_folder):
         print("Saving dataset as", dataset_name)
+        if not os.path.exists(dataset_folder):
+            os.makedirs(dataset_folder)
+
         df_matches.to_csv(
             os.path.join(dataset_folder, f"matches_{dataset_name}.csv"), index=False
         )
