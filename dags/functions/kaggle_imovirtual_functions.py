@@ -1,5 +1,5 @@
 """
-Helper file for imovirtual DAG.
+Helper file for kaggle_imovirtual DAG.
 """
 
 import logging
@@ -178,7 +178,7 @@ def serialize_extraction(output_path_folder: str) -> None:
 
 
 def extract_by_type(
-    service_type: str, residence_type: str, output_path: str, time_sleep: int = 1
+    service_type: str, residence_type: str, output_path: str, time_sleep: int = 0.2
 ) -> None:
     """
     Extract the data from imovirtual page based on service and residence type
@@ -256,10 +256,14 @@ def format_transform_consolidate(output_path: str, file_name: str) -> None:
     Returns:
         None: no return.
     """
-    paths_df = os.listdir(output_path)
-    list_df = pd.concat(
-        [pd.read_csv(os.path.join(output_path, path_df)) for path_df in paths_df]
-    )
+    paths_df = []
+    for residence_type in ["moradia", "apartamento"]:  # house or apartment
+        for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
+            paths_df.append(
+                os.path.join(output_path, f"{service_type}_{residence_type}.csv")
+            )
+    list_df = pd.concat(paths_df)
+
     list_df.columns = [
         "Location",
         "Rooms",
@@ -311,3 +315,4 @@ def format_transform_consolidate(output_path: str, file_name: str) -> None:
     list_df.Area = list_df.Area.str.replace(",", ".").apply(float).round(2)
     list_df.dropna()
     list_df.to_csv(os.path.join(output_path, file_name), index=False)
+    paths_df = [os.remove(os.path.join(output_path, path_df)) for path_df in paths_df]

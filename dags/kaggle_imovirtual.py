@@ -31,7 +31,8 @@ default_args = {
 
 
 with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args) as dag:
-    OUTPUT_PATH = os.path.join(Variable.get("ROOT_OUTPUT_PATH"), "imovirtual")
+    KAGGLE_DATASET = "portugal-proprieties-rent-buy-and-vacation"
+    OUTPUT_PATH = os.path.join(Variable.get("ROOT_OUTPUT_PATH"), KAGGLE_DATASET)
     logging.info("Using OUTPUT_PATH as %s", OUTPUT_PATH)
 
     is_imovirtual_available = HttpSensor(
@@ -62,15 +63,14 @@ with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args)
         task_id="task_format_transform_consolidate",
         python_callable=format_transform_consolidate,
         op_kwargs={
-            "output_path": OUTPUT_PATH,
             "file_name": "portugal_ads_proprieties.csv",
+            "output_path": OUTPUT_PATH,
         },
     )
     task_push_to_kaggle = KaggleDatasetPush(
         task_id="task_push_to_kaggle",
-        kaggle_dataset="portugal-proprieties-rent-buy-and-vacation",
+        kaggle_dataset=KAGGLE_DATASET,
         kaggle_username="mcarujo",
-        file_name="portugal_ads_proprieties.csv",
         output_path=OUTPUT_PATH,
     )
     (
