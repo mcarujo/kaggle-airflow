@@ -19,3 +19,4 @@ Extract data from different sources, transform them and load them at Kaggle plat
 
 ### Datasets coverd by the repository:
 - [portugal-proprieties-rent-buy-and-vacation](https://www.kaggle.com/datasets/mcarujo/portugal-proprieties-rent-buy-and-vacation)
+- [european-football-season-202223](https://www.kaggle.com/datasets/mcarujo/european-football-season-202223)
