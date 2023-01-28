@@ -11,7 +11,7 @@ from airflow.models import Variable
 from airflow.operators.python import PythonOperator
 from airflow.providers.http.sensors.http import HttpSensor
 from functions.kaggle_operator import KaggleDatasetPush
-from functions.kaggle_imovirtual_functions import (
+from functions.imovirtual_functions import (
     create_output_path,
     serialize_extraction,
     format_transform_consolidate,
