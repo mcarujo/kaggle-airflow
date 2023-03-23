@@ -11,11 +11,7 @@ from airflow.models import Variable
 from airflow.operators.python import PythonOperator
 from airflow.providers.http.sensors.http import HttpSensor
 from functions.kaggle_operator import KaggleDatasetPush
-from functions.imovirtual_functions import (
-    create_output_path,
-    serialize_extraction,
-    format_transform_consolidate,
-)
+from functions.imovirtual_functions import imovirtual_extract_transform
 
 # SETTINGS
 default_args = {
@@ -45,26 +41,14 @@ with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args)
         timeout=20,
     )
 
-    task_create_output_path = PythonOperator(
-        task_id="task_create_output_path",
-        python_callable=create_output_path,
-        op_kwargs={"output_path": OUTPUT_PATH},
-    )
-
-    tasks_download_process_in_series = PythonOperator(
-        task_id="tasks_download_process_in_series",
-        python_callable=serialize_extraction,
-        op_kwargs={
-            "output_path_folder": OUTPUT_PATH,
-        },
-    )
-
-    task_format_transform_consolidate = PythonOperator(
-        task_id="task_format_transform_consolidate",
-        python_callable=format_transform_consolidate,
+    imovirtual_extract_transform = PythonOperator(
+        task_id="imovirtual_extract_transform",
+        python_callable=imovirtual_extract_transform,
         op_kwargs={
             "file_name": "portugal_ads_proprieties.csv",
             "output_path": OUTPUT_PATH,
+            "count_try": 3,
+            "break_time": 300,  # 300 seconds = 5 minutes
         },
     )
     task_push_to_kaggle = KaggleDatasetPush(
@@ -73,10 +57,4 @@ with DAG("kaggle_imovirtual", schedule_interval=None, default_args=default_args)
         kaggle_username="mcarujo",
         output_path=OUTPUT_PATH,
     )
-    (
-        is_imovirtual_available
-        >> task_create_output_path
-        >> tasks_download_process_in_series
-        >> task_format_transform_consolidate
-        >> task_push_to_kaggle
-    )
+    (is_imovirtual_available >> imovirtual_extract_transform >> task_push_to_kaggle)
