@@ -94,11 +94,14 @@ class OneFootballOperator(BaseOperator):
         )
         driver.execute_script("arguments[0].click();", el)
         time.sleep(1)
-        el = driver.find_element_by_xpath(
-            "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/of-xpa-switch-match/of-match-events/div/button"
-        )
-        driver.execute_script("arguments[0].click();", el)
-        time.sleep(1)
+        try:
+            el = driver.find_element_by_xpath(
+                "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/of-xpa-switch-match/of-match-events/div/button"
+            )
+            driver.execute_script("arguments[0].click();", el)
+            time.sleep(1)
+        except:
+            pass
         page = driver.page_source
         el = driver.find_element_by_xpath(
             "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/div[1]/div/of-xpa-switch-match/of-match-lineup/section/nav/ul/li[2]/button/div/span"
@@ -417,7 +420,6 @@ class OneFootballOperator(BaseOperator):
         df["player_numbers_away"] = df.apply(
             lambda row: extract_player_data(row["lineup_away"])[1], axis=1
         )
-
         df["player_names_home"] = df["player_names_home"].apply(
             lambda x: list(map(str.strip, x))
         )
