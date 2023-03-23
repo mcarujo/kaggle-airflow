@@ -133,3 +133,4 @@ outputs
 .vscode
 *.csv
 .kaggle
+*.ipynb
