@@ -90,7 +90,7 @@ with DAG(
                 competition_name=competition["competition"],
                 output_path=OUTPUT_PATH,
                 chromedriver_path="/opt/airflow/plugins/chromedriver",
-                n_jobs=8,
+                n_jobs=4,
             )
         )
         if i == 0:

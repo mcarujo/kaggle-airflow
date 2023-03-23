@@ -7,6 +7,7 @@ import os
 import re
 import shutil
 import time
+from joblib import Parallel, delayed
 
 import numpy as np
 import pandas as pd
@@ -123,20 +124,14 @@ def get_regions():
     ]
 
 
-def get_number_of_pages(soup: BeautifulSoup) -> int:
-    """
-    Catch the information of how many pages of ad for that area.
-
-    Args:
-        soup (BeautifulSoup): soup object that contains the html.
-
-    Returns:
-        int: The number of pages, in case of issue returns 1.
-    """
-    try:
-        return int(soup.find("ul", class_="pager").find_all("li")[-2].text)
-    except:
-        return 1
+def create_request_link(service_type, residence_type, region, page):
+    space = " "
+    dash = "-"
+    return (
+        f"https://www.imovirtual.com/{service_type}/{residence_type}"
+        + f"/{region[0].lower().replace(space,dash)}"
+        + f"/?search%5Bregion_id%5D={region[1]}&nrAdsPerPage=72&page={page}"
+    )
 
 
 def get_html_as_bs(
@@ -154,79 +149,12 @@ def get_html_as_bs(
     Returns:
         BeautifulSoup: a BeautifulSoup object made using the html requested.
     """
-    space = " "
-    dash = "-"
+
     response = requests.get(
-        f"https://www.imovirtual.com/{service_type}/{residence_type}"
-        + f"/{region[0].lower().replace(space,dash)}"
-        + f"/?search%5Bregion_id%5D={region[1]}&nrAdsPerPage=72&page={page}",
+        create_request_link(service_type, residence_type, region, page),
         timeout=120,
     )
     return BeautifulSoup(response.text, features="lxml")
-
-
-def serialize_extraction(output_path_folder: str) -> None:
-    """
-    Start the data extraction process based on residence and service type.
-
-    Args:
-        output_path_folder (str): path to store the partial csv.
-    """
-    for residence_type in ["moradia", "apartamento"]:  # house or apartment
-        for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
-            extract_by_type(service_type, residence_type, output_path_folder)
-
-
-def extract_by_type(
-    service_type: str, residence_type: str, output_path: str, time_sleep: int = 0.2
-) -> None:
-    """
-    Extract the data from imovirtual page based on service and residence type
-    then store a DataFrame in the output folder specified.
-
-    Args:
-        service_type (str): determine what service the residence belongs.
-        residence_type (str): the type of residence, covered so far by house or apartment.
-        output_path (str): the DataFrame destination.
-        time_sleep (int): seconds to wait between requests.
-
-    Returns:
-        None: the goal is just store in the output folder.
-    """
-    logging.info(
-        "Started to extract data based on  %s -  %s !", service_type, residence_type
-    )
-    pages = []
-    regions = get_regions()
-    for region in regions:
-        max_pages = get_number_of_pages(
-            get_html_as_bs(region, "1", service_type, residence_type)
-        )
-        logging.info(
-            "Total of %s pages for the %s region considering %s - %s.",
-            max_pages,
-            region[0],
-            service_type,
-            residence_type,
-        )
-
-        for page in range(1, max_pages + 1):
-            time.sleep(time_sleep)
-            html = get_html_as_bs(region, page, service_type, residence_type)
-            pages.append(pd.DataFrame(get_info_from_page(html)))
-
-    dataset = pd.concat(pages)
-    dataset["service_type"] = service_type
-    dataset["residence_type"] = residence_type
-    df_output_path = os.path.join(
-        output_path,
-        f"{service_type}_{residence_type}.csv",
-    )
-    logging.info("The DataFrame will be stored at %s", df_output_path)
-    dataset.to_csv(df_output_path, index=False)
-    logging.info(
-        "Finished to extract data based on %s - %s!", service_type, residence_type
-    )
 
 
 def create_output_path(output_path: str):
@@ -246,7 +174,7 @@ def create_output_path(output_path: str):
     logging.info("The output path '%s' has been created empty.", output_path)
 
 
-def format_transform_consolidate(output_path: str, file_name: str) -> None:
+def format_transform_consolidate(list_df, output_path: str, file_name: str) -> None:
     """Load all partials csv into one, format it and then store it.
 
     Args:
@@ -256,13 +184,7 @@ def format_transform_consolidate(output_path: str, file_name: str) -> None:
     Returns:
         None: no return.
     """
-    paths_df = []
-    for residence_type in ["moradia", "apartamento"]:  # house or apartment
-        for service_type in ["arrendar", "comprar", "ferias"]:  # rent, buy or vacation
-            paths_df.append(
-                os.path.join(output_path, f"{service_type}_{residence_type}.csv")
-            )
-    list_df = pd.concat(paths_df)
+    list_df = pd.concat(list_df.flag_extract.apply(pd.DataFrame).tolist())
 
     list_df.columns = [
         "Location",
@@ -274,7 +196,9 @@ def format_transform_consolidate(output_path: str, file_name: str) -> None:
         "AdsType",
         "ProprietyType",
     ]
-    list_df.Price = list_df.Price.apply(float).round(2)
+    list_df.Price = list_df.Price.apply(
+        lambda x: round(float(x), 2) if x.isdigit() else np.nan
+    )
     list_df.Rooms = list_df.Rooms.apply(lambda x: x.replace("T", ""))
 
     def format_bathrooms(quantity_bathrooms):
@@ -314,5 +238,150 @@ def format_transform_consolidate(output_path: str, file_name: str) -> None:
     )
     list_df.Area = list_df.Area.str.replace(",", ".").apply(float).round(2)
     list_df.dropna()
+
+    if os.path.exists(output_path):
+        logging.info("The output path '%s' already exists, just saving...", output_path)
+    else:
+        logging.info(
+            "The output path '%s' doesn't exists, just creating before save...",
+            output_path,
+        )
+        os.makedirs(output_path)
+
     list_df.to_csv(os.path.join(output_path, file_name), index=False)
-    paths_df = [os.remove(os.path.join(output_path, path_df)) for path_df in paths_df]
+
+
+def pre_extract_by_type(time_sleep: int = 1) -> None:
+    """
+    Extract the data from imovirtual page based on service and residence type
+    then store a DataFrame in the output folder specified.
+
+    Args:
+        service_type (str): determine what service the residence belongs.
+        residence_type (str): the type of residence, covered so far by house or apartment.
+        output_path (str): the DataFrame destination.
+        time_sleep (int): seconds to wait between requests.
+
+    Returns:
+        None: the goal is just store in the output folder.
+    """
+    logging.info("Started pre extract database!")
+    pages = []
+    regions = get_regions()
+    residences = ["moradia", "apartamento"]  # house or apartment
+    services = ["arrendar", "comprar", "ferias"]  # rent, buy or vacation
+
+    for residence_type in residences:
+        for service_type in services:
+            for region in regions:
+                time.sleep(time_sleep)
+                n_offers, max_pages = get_number_of_pages(
+                    get_html_as_bs(region, "1", service_type, residence_type)
+                )
+                logging.info(
+                    "Total of %s pages (offers: %s) for the %s region considering %s - %s.",
+                    max_pages,
+                    n_offers,
+                    region[0],
+                    service_type,
+                    residence_type,
+                )
+                for page in range(1, max_pages + 1):
+                    aux_dict = {
+                        "page": page,
+                        "region": region,
+                        "max_pages": max_pages,
+                        "n_offers": n_offers,
+                        "service_type": service_type,
+                        "residence_type": residence_type,
+                        "flag_extract": False,
+                    }
+                    pages.append(aux_dict)
+
+        pages_df = pd.DataFrame(pages)
+        pages_df_filter = pages_df.n_offers != 0
+        return pages_df[pages_df_filter]
+
+
+def get_number_of_pages(soup: BeautifulSoup) -> int:
+    """
+    Catch the information of how many pages of ad for that area.
+
+    Args:
+        soup (BeautifulSoup): soup object that contains the html.
+
+    Returns:
+        int: The number of pages, in case of issue returns 1.
+    """
+    try:
+        n_offers = int(
+            soup.find("div", class_="offers-index pull-left text-nowrap")
+            .find("strong")
+            .text.replace(" ", "")
+            .replace("\n", "")
+        )
+    except:
+        n_offers = 0
+    try:
+        n_pages = int(soup.find("ul", class_="pager").find_all("li")[-2].text)
+    except:
+        n_pages = 1
+
+    return n_offers, n_pages
+
+
+def get_info_pre_page(page):
+    page_dict = dict(page)
+    if page_dict["flag_extract"] == False:
+        try:
+            html = get_html_as_bs(
+                page_dict["region"],
+                page_dict["page"],
+                page_dict["service_type"],
+                page_dict["residence_type"],
+            )
+            return_info = get_info_from_page(html)
+            return return_info if return_info else False
+        except:
+            return False
+    else:
+        return page_dict["flag_extract"]
+
+
+def extraction(output_path, file_name, count_try=0, break_time=10):
+    list_pages = pre_extract_by_type()
+    list_pages["flag_extract"] = False
+    still_open = True
+    logging.info("Starting Extraction.")
+    while count_try < 1 and still_open:
+        aux_list = Parallel(n_jobs=2, backend="threading", verbose=10)(
+            delayed(get_info_pre_page)(page) for i, page in list_pages.iterrows()
+        )
+
+        list_pages["flag_extract"] = aux_list
+
+        count_try += 1
+        n_left = sum(list_pages.flag_extract == False)
+        logging.info("How many are left? %s", n_left)
+        if n_left == 0:
+            still_open = False
+
+        print("count_try", count_try)
+        print("still_open", still_open)
+
+        print(f"Waiting {break_time} Seconds.")
+        time.sleep(break_time)
+
+    list_pages.dropna()
+    logging.info("Extraction is done. Saving the service and residence")
+    for i, line in list_pages.iterrows():
+        for sample in line.flag_extract:
+            sample["service_type"] = line["service_type"]
+            sample["residence_type"] = line["residence_type"]
+
+    return list_pages
+
+
+def imovirtual_extract_transform(output_path, file_name):
+    list_pages = extraction(output_path, file_name)
+    format_transform_consolidate(list_pages, output_path, file_name)
