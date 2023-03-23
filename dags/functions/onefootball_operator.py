@@ -188,11 +188,14 @@ class OneFootballOperator(BaseOperator):
         except:
             pass
         ## STATISTICS
-        description = page.find_all("div", class_="match-stats__stat-description")
-        for d in description:
-            field = self.__format_field(d.find_all("p")[1].text)
-            aux_dict[field + "_home"] = d.find_all("p")[0].text
-            aux_dict[field + "_away"] = d.find_all("p")[2].text
+        try:
+            description = page.find_all("div", class_="match-stats__stat-description")
+            for d in description:
+                field = self.__format_field(d.find_all("p")[1].text)
+                aux_dict[field + "_home"] = d.find_all("p")[0].text
+                aux_dict[field + "_away"] = d.find_all("p")[2].text
+        except:
+            pass
 
         ## PREDICTION
         predictions = page.find("ul", class_="match-prediction__buttons").find_all("li")
@@ -384,10 +387,11 @@ class OneFootballOperator(BaseOperator):
 
         def clean_percentage_columns(df, columns_list):
             for column in columns_list:
-                df[column] = df[column].astype(str)
-                df[column] = df[column].str.replace("%", "")
-                df[column] = df[column].astype(float)
-                df[column] = df[column] / 100
+                if column in df.columns:
+                    df[column] = df[column].astype(str)
+                    df[column] = df[column].str.replace("%", "")
+                    df[column] = df[column].astype(float)
+                    df[column] = df[column] / 100
             return df
 
         clean_percentage_columns(df, columns)
