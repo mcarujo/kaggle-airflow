@@ -39,6 +39,9 @@ class OneFootballOperator(BaseOperator):
         """
         Creates the path to upload the dataset, download the metadata and push it.
         """
+        print("SAVING THE TABLE")
+        page = self.__get_html_table(self.competition_link)
+        self.__get_info_html_table(page)
         print("EXTRACTING")
         df_competition = self.__extraction(self.competition_link)
         print("TRANSFORMING")
@@ -74,6 +77,39 @@ class OneFootballOperator(BaseOperator):
         page = driver.page_source
         driver.close()
         return BeautifulSoup(page, features="lxml")
+
+    def __get_html_table(self, url):
+        driver = self.__browser(url.replace("results", "table"))
+        time.sleep(5)
+        el = driver.find_element_by_xpath(
+            "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
+        )
+        driver.execute_script("arguments[0].click();", el)
+        return BeautifulSoup(driver.page_source, features="lxml")
+
+    def __get_info_html_table(self, page):
+        lines = (
+            page.find("article", class_="standings__table-wrapper")
+            .find("ul")
+            .find_all("li", class_="standings__row standings__row--link")
+        )
+        line_values = []
+        for line in lines:
+            aux_values = []
+            aux_values.append(
+                line.find("p", class_="title-7-medium standings__team-name").text
+            )
+            for div in line.find_all("div", class_="standings__cell"):
+                aux_values.append(div.text)
+            line_values.append(aux_values)
+        table = pd.DataFrame(line_values)
+        table.columns = ["Team", "Position", "drop", "PL", "W", "D", "L", "GD", "PTS"]
+        table.drop("drop", axis=1, inplace=True)
+        table.to_csv(
+            os.path.join(self.output_path, f"table_{self.competition_name}.csv"),
+            index=False,
+        )
+        return table
 
     def get_html_full_match(self, url):
         driver = self.__browser(url)
