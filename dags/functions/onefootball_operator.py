@@ -39,6 +39,9 @@ class OneFootballOperator(BaseOperator):
         """
         Creates the path to upload the dataset, download the metadata and push it.
         """
+        print("SAVING THE TABLE")
+        page = self.__get_html_table(self.competition_link)
+        self.__get_info_html_table(page)
         print("EXTRACTING")
         df_competition = self.__extraction(self.competition_link)
         print("TRANSFORMING")
@@ -75,6 +78,39 @@ class OneFootballOperator(BaseOperator):
         driver.close()
         return BeautifulSoup(page, features="lxml")
 
+    def __get_html_table(self, url):
+        driver = self.__browser(url.replace("results", "table"))
+        time.sleep(5)
+        el = driver.find_element_by_xpath(
+            "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
+        )
+        driver.execute_script("arguments[0].click();", el)
+        return BeautifulSoup(driver.page_source, features="lxml")
+
+    def __get_info_html_table(self, page):
+        lines = (
+            page.find("article", class_="standings__table-wrapper")
+            .find("ul")
+            .find_all("li", class_="standings__row standings__row--link")
+        )
+        line_values = []
+        for line in lines:
+            aux_values = []
+            aux_values.append(
+                line.find("p", class_="title-7-medium standings__team-name").text
+            )
+            for div in line.find_all("div", class_="standings__cell"):
+                aux_values.append(div.text)
+            line_values.append(aux_values)
+        table = pd.DataFrame(line_values)
+        table.columns = ["Team", "Position", "drop", "PL", "W", "D", "L", "GD", "PTS"]
+        table.drop("drop", axis=1, inplace=True)
+        table.to_csv(
+            os.path.join(self.output_path, f"table_{self.competition_name}.csv"),
+            index=False,
+        )
+        return table
+
     def get_html_full_match(self, url):
         driver = self.__browser(url)
         el = driver.find_element_by_xpath(
@@ -94,11 +130,14 @@ class OneFootballOperator(BaseOperator):
         )
         driver.execute_script("arguments[0].click();", el)
         time.sleep(1)
-        el = driver.find_element_by_xpath(
-            "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/of-xpa-switch-match/of-match-events/div/button"
-        )
-        driver.execute_script("arguments[0].click();", el)
-        time.sleep(1)
+        try:
+            el = driver.find_element_by_xpath(
+                "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/of-xpa-switch-match/of-match-events/div/button"
+            )
+            driver.execute_script("arguments[0].click();", el)
+            time.sleep(1)
+        except:
+            pass
         page = driver.page_source
         el = driver.find_element_by_xpath(
             "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/div[1]/div/of-xpa-switch-match/of-match-lineup/section/nav/ul/li[2]/button/div/span"
@@ -185,11 +224,14 @@ class OneFootballOperator(BaseOperator):
         except:
             pass
         ## STATISTICS
-        description = page.find_all("div", class_="match-stats__stat-description")
-        for d in description:
-            field = self.__format_field(d.find_all("p")[1].text)
-            aux_dict[field + "_home"] = d.find_all("p")[0].text
-            aux_dict[field + "_away"] = d.find_all("p")[2].text
+        try:
+            description = page.find_all("div", class_="match-stats__stat-description")
+            for d in description:
+                field = self.__format_field(d.find_all("p")[1].text)
+                aux_dict[field + "_home"] = d.find_all("p")[0].text
+                aux_dict[field + "_away"] = d.find_all("p")[2].text
+        except:
+            pass
 
         ## PREDICTION
         predictions = page.find("ul", class_="match-prediction__buttons").find_all("li")
@@ -381,10 +423,11 @@ class OneFootballOperator(BaseOperator):
 
         def clean_percentage_columns(df, columns_list):
             for column in columns_list:
-                df[column] = df[column].astype(str)
-                df[column] = df[column].str.replace("%", "")
-                df[column] = df[column].astype(float)
-                df[column] = df[column] / 100
+                if column in df.columns:
+                    df[column] = df[column].astype(str)
+                    df[column] = df[column].str.replace("%", "")
+                    df[column] = df[column].astype(float)
+                    df[column] = df[column] / 100
             return df
 
         clean_percentage_columns(df, columns)
@@ -417,7 +460,6 @@ class OneFootballOperator(BaseOperator):
         df["player_numbers_away"] = df.apply(
             lambda row: extract_player_data(row["lineup_away"])[1], axis=1
         )
-
         df["player_names_home"] = df["player_names_home"].apply(
             lambda x: list(map(str.strip, x))
         )

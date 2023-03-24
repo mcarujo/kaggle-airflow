@@ -45,6 +45,10 @@ with DAG(
 
     competitions = [
         {
+            "competition_link": "https://onefootball.com/en/competition/liga-portugal-35/results",
+            "competition": "liga-portugal_2022-23",
+        },
+        {
             "competition_link": "https://onefootball.com/en/competition/laliga-10/results",
             "competition": "laliga_2022-23",
         },
@@ -72,10 +76,6 @@ with DAG(
             "competition_link": "https://onefootball.com/en/competition/ligue-1-uber-eats-23/results",
             "competition": "ligue-1_2022-23",
         },
-        # {
-        #     "competition_link": "https://onefootball.com/en/competition/liga-portugal-35/results",
-        #     "competition": "liga-portugal_2022-23",
-        # },
         {
             "competition_link": "https://onefootball.com/en/competition/eredivisie-36/results",
             "competition": "eredivisie_2022-23",
@@ -90,7 +90,7 @@ with DAG(
                 competition_name=competition["competition"],
                 output_path=OUTPUT_PATH,
                 chromedriver_path="/opt/airflow/plugins/chromedriver",
-                n_jobs=8,
+                n_jobs=4,
             )
         )
         if i == 0:
