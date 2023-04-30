@@ -30,7 +30,7 @@ with DAG(
 ) as dag:
     KAGGLE_DATASET = "european-football-season-202223"
     OUTPUT_PATH = os.path.join(Variable.get("ROOT_OUTPUT_PATH"), KAGGLE_DATASET)
-
+    N_JOBS = int(Variable.get("N_JOBS"))
     logging.info("Using OUTPUT_PATH as %s", OUTPUT_PATH)
 
     is_onefootball_available = HttpSensor(
@@ -90,7 +90,7 @@ with DAG(
                 competition_name=competition["competition"],
                 output_path=OUTPUT_PATH,
                 chromedriver_path="/opt/airflow/plugins/chromedriver",
-                n_jobs=4,
+                n_jobs=N_JOBS,
             )
         )
         if i == 0:
