@@ -12,6 +12,7 @@ from airflow.models.baseoperator import BaseOperator
 from bs4 import BeautifulSoup
 from joblib import Parallel, delayed
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 class OneFootballOperator(BaseOperator):
@@ -40,16 +41,16 @@ class OneFootballOperator(BaseOperator):
         Creates the path to upload the dataset, download the metadata and push it.
         """
         print("SAVING THE TABLE")
-        page = self.__get_html_table(self.competition_link)
-        self.__get_info_html_table(page)
+        page = self.get_html_table(self.competition_link)
+        self.get_info_html_table(page)
         print("EXTRACTING")
-        df_competition = self.__extraction(self.competition_link)
+        df_competition = self.extraction(self.competition_link)
         print("TRANSFORMING")
-        df_matches, df_events = self.__transform(df_competition)
+        df_matches, df_events = self.transform(df_competition)
         print("SAVING")
-        self.__store(df_matches, df_events, self.competition_name, self.output_path)
+        self.store(df_matches, df_events, self.competition_name, self.output_path)
 
-    def __browser(self, url):
+    def browser(self, url):
         option = webdriver.ChromeOptions()
         option.add_argument("--headless")
         option.add_argument("--no-sandbox")
@@ -62,15 +63,16 @@ class OneFootballOperator(BaseOperator):
         driver.get(url)
         return driver
 
-    def __get_html_full(self, url):
-        driver = self.__browser(url)
+    def get_html_full(self, url):
+        driver = self.browser(url)
         time.sleep(5)
-        el = driver.find_element_by_xpath(
-            "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
+        el = driver.find_element(
+            By.XPATH, "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
         )
         driver.execute_script("arguments[0].click();", el)
-        el = driver.find_element_by_xpath(
-            "/html/body/of-root/div/main/of-entity-stream/section/of-xpa-layout-entity/section[5]/of-xpa-switch-entity/section/of-match-cards-lists-appender/div/div/button/span"
+        el = driver.find_element(
+            By.XPATH,
+            "/html/body/of-root/div/main/of-entity-stream/section/of-xpa-layout-entity/section[5]/of-xpa-switch-entity/section/of-match-cards-lists-appender/div/div/button/span",
         )
         driver.execute_script("arguments[0].click();", el)
         time.sleep(5)
@@ -78,20 +80,18 @@ class OneFootballOperator(BaseOperator):
         driver.close()
         return BeautifulSoup(page, features="lxml")
 
-    def __get_html_table(self, url):
-        driver = self.__browser(url.replace("results", "table"))
+    def get_html_table(self, url):
+        driver = self.browser(url.replace("results", "table"))
         time.sleep(5)
-        el = driver.find_element_by_xpath(
-            "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
+        el = driver.find_element(
+            By.XPATH, "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
         )
         driver.execute_script("arguments[0].click();", el)
         return BeautifulSoup(driver.page_source, features="lxml")
 
-    def __get_info_html_table(self, page):
-        lines = (
-            page.find("article", class_="standings__table-wrapper")
-            .find("ul")
-            .find_all("li", class_="standings__row standings__row--link")
+    def get_table(self, article):
+        lines = article.find("ul").find_all(
+            "li", class_="standings__row standings__row--link"
         )
         line_values = []
         for line in lines:
@@ -105,14 +105,31 @@ class OneFootballOperator(BaseOperator):
         table = pd.DataFrame(line_values)
         table.columns = ["Team", "Position", "drop", "PL", "W", "D", "L", "GD", "PTS"]
         table.drop("drop", axis=1, inplace=True)
+        return table
+
+    def get_info_html_table(self, page):
+        articles = page.find_all("article", class_="standings__table-wrapper")
+
+        if len(articles) < 1:
+            table = self.get_table(articles[0])
+        else:
+            aux_table_list = []
+            for article in articles:
+                group_name = article.find(
+                    "p", class_="standings__table-header-text"
+                ).text
+                table = self.get_table(article)
+                table["group_name"] = group_name
+                aux_table_list.append(table)
+            table = pd.concat(aux_table_list)
+
         table.to_csv(
             os.path.join(self.output_path, f"table_{self.competition_name}.csv"),
             index=False,
         )
-        return table
 
     def get_html_full_match(self, url):
-        driver = self.__browser(url)
+        driver = self.browser(url)
         el = driver.find_element_by_xpath(
             "/html/body/of-root/main/of-competition-results-stream/section/of-entity-page-root/div/of-xpa-switch-entity-deprecated[7]/of-simple-match-cards-list-deprecated/div/button"
         )
@@ -122,26 +139,44 @@ class OneFootballOperator(BaseOperator):
         driver.close()
         return BeautifulSoup(page, features="lxml")
 
-    def __get_html_from_a_match(self, url):
-        driver = self.__browser(url)
+    def get_html_from_a_match(self, url):
+        driver = self.browser(url)
         time.sleep(3)
-        el = driver.find_element_by_xpath(
-            "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
-        )
-        driver.execute_script("arguments[0].click();", el)
-        time.sleep(1)
+        # Cache or cookies
         try:
             el = driver.find_element_by_xpath(
-                "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/of-xpa-switch-match/of-match-events/div/button"
+                "/html/body/div/div[2]/div/div[1]/div/div[2]/div/button[1]"
+            )
+            driver.execute_script("arguments[0].click();", el)
+            time.sleep(3)
+        except:
+            pass
+        # Show all match events
+        try:
+            el = driver.find_element(
+                By.XPATH, "//*[@id='__next']/main/div/div/div[5]/div/div/button"
             )
             driver.execute_script("arguments[0].click();", el)
             time.sleep(1)
         except:
-            pass
+            try:
+                el = driver.find_element(
+                    By.XPATH, "//*[@id='__next']/main/div/div/div[4]/div/div/button"
+                )
+                driver.execute_script("arguments[0].click();", el)
+                time.sleep(1)
+            except:
+                pass
         page = driver.page_source
-        el = driver.find_element_by_xpath(
-            "/html/body/of-root/div/main/of-match-stream-v2/section/of-xpa-layout-match/section[*]/div[1]/div/of-xpa-switch-match/of-match-lineup/section/nav/ul/li[2]/button/div/span"
-        )
+        # Away lineup
+        try:
+            el = driver.find_element_by_xpath(
+                "/html/body/div[1]/main/div/div/div[5]/div[1]/div/section/nav/ul/li[2]/button/div/span"
+            )
+        except:
+            el = driver.find_element_by_xpath(
+                "/html/body/div[1]/main/div/div/div[6]/div[1]/div/section/nav/ul/li[2]/button/div/span"
+            )
         driver.execute_script("arguments[0].click();", el)
         time.sleep(1)
         second_lineup = driver.page_source
@@ -150,7 +185,7 @@ class OneFootballOperator(BaseOperator):
             second_lineup, features="lxml"
         )
 
-    def __format_field(self, string):
+    def format_field(self, string):
         string = str(string)
         string = string.lower()
         string = string.strip()
@@ -158,11 +193,25 @@ class OneFootballOperator(BaseOperator):
         string = string.replace(" ", "_")
         return string
 
-    def __get_info_from_event(self, event):
+    def indentify_event(self, text):
+        events = [
+            "yellow-card",
+            "red-card",
+            "goal",
+            "own-goal",
+            "substitution",
+            "penalty",
+        ]
+        for event in events:
+            if event in text:
+                return event
+        return ""
+
+    def get_info_from_event(self, event):
         aux_event = {}
-        aux_event["event_team"] = event["class"][-1][-4:]
+        aux_event["event_team"] = event["class"][1].split("__")[0][-4:]
         aux_event["event_time"] = event.find(
-            "div", class_="match-events__item-timeline"
+            "p", class_=re.compile("MatchEventsTimeline_matchEventsItemTimeline")
         ).text
 
         if aux_event["event_time"] == " PK ":
@@ -170,109 +219,106 @@ class OneFootballOperator(BaseOperator):
             aux_event["event_type"] = "PK"
             aux_event["event_result"] = event.find("img", class_="of-image__img")["alt"]
             aux_event["event_player"] = (
-                event.find("div", class_="match-events__text").find("p").text
+                event.find("div", class_=re.compile("MatchEventCard_matchEventsText"))
+                .find("p")
+                .text
             )
         else:
-            try:
-                aux_event["event_type"] = event.find(class_="match-events__icon")[
-                    "aria-label"
-                ]
-            except:
-                aux_event["event_type"] = event.find("img", class_="of-image__img")[
-                    "alt"
-                ]
+            aux_event["event_type"] = self.indentify_event(
+                event.find("source")["srcset"]
+            )
             try:
                 for i, text in enumerate(
-                    event.find("div", class_="match-events__text").find_all("p")
+                    event.find(
+                        "div", class_=re.compile("MatchEventCard_matchEventsText")
+                    ).find_all("p")
                 ):
                     aux_event["action_player_" + str(i + 1)] = text.text
             except:
                 aux_event["action_player_1"] = event.find(
-                    "p", class_="match-events__text"
+                    "p", class_=re.compile("MatchEventCard_matchEventsText")
                 ).text
 
         return aux_event
 
-    def __get_info_from_match(self, page, second_lineup):
+    def get_info_from_match(self, page, second_lineup):
         aux_dict = {}
 
         ## NAMES
         aux_dict["team_name_home"] = page.find(
-            "span", class_="match-score-team__name--home"
+            "a", class_=re.compile("MatchScoreTeam_home")
         ).text
         aux_dict["team_name_away"] = page.find(
-            "span", class_="match-score-team__name--away"
+            "a", class_=re.compile("MatchScoreTeam_away")
         ).text
 
         ## GOAL
-        scores = page.find("p", class_="match-score-scores").find_all("span")
+        scores = page.find("p", class_=re.compile("MatchScore_scores")).find_all("span")
         aux_dict["team_home_score"] = scores[0].text
         aux_dict["team_away_score"] = scores[2].text
 
         ## PENS
-        try:
-            pens = (
-                page.find("div", class_="match-score__data")
-                .find("span", class_="title-7-medium")
-                .text
-            )
-            if "Pens" in pens:
-                aux_dict["pens"] = True
-                pens_aux = pens.split(": ")[1].split(" - ")
-                aux_dict["pens_home_score"] = pens_aux[0]
-                aux_dict["pens_away_score"] = pens_aux[1]
-        except:
-            pass
+        #         try:
+        pens = (
+            page.find("div", class_=re.compile("MatchScore_data"))
+            .find("span", class_="title-7-medium")
+            .text
+        )
+        if "Pens" in pens:
+            aux_dict["pens"] = True
+            pens_aux = pens.split(": ")[1].split(" - ")
+            aux_dict["pens_home_score"] = pens_aux[0]
+            aux_dict["pens_away_score"] = pens_aux[1]
+        #         except:
+        #             pass
         ## STATISTICS
         try:
-            description = page.find_all("div", class_="match-stats__stat-description")
+            description = page.find_all(
+                "div", class_=re.compile("MatchStatsEntry_description")
+            )
             for d in description:
-                field = self.__format_field(d.find_all("p")[1].text)
+                field = self.format_field(d.find_all("p")[1].text)
                 aux_dict[field + "_home"] = d.find_all("p")[0].text
                 aux_dict[field + "_away"] = d.find_all("p")[2].text
         except:
             pass
 
         ## PREDICTION
-        predictions = page.find("ul", class_="match-prediction__buttons").find_all("li")
+        predictions = page.find(
+            "ul", class_=re.compile("MatchPrediction_buttons")
+        ).find_all("li")
         aux_dict["prediction_team_home_win"] = predictions[0].text
         aux_dict["prediction_draw"] = predictions[1].text
         aux_dict["prediction_team_away_win"] = predictions[2].text
         aux_dict["prediction_quantity"] = (
-            page.find("span", class_="title-7-regular match-prediction__message-text")
-            .find("b")
-            .text
+            page.find("p", class_=re.compile("MatchPrediction_message")).find("b").text
         )
 
         ## LOCATION
-        entries = page.find("ul", class_="match-info__entries").find_all("li")
+        entries = page.find("ul", class_=re.compile("MatchInfo_entries")).find_all("li")
         aux_dict["location"] = (
-            entries[-1]
-            .find("span", class_="title-8-regular match-info__entry-subtitle")
-            .text
+            entries[-1].find("span", class_=re.compile("MatchInfoEntry_subtitle")).text
         )
         aux_dict["date"] = (
-            entries[1]
-            .find("span", class_="title-8-regular match-info__entry-subtitle")
-            .text
+            entries[1].find("span", class_=re.compile("MatchInfoEntry_subtitle")).text
         )
 
         ## EVENTS
-        events = page.find("ul", class_="match-events__list").find_all(
-            "li", class_="match-events__item"
-        )
-        aux_dict["events_list"] = [
-            self.__get_info_from_event(event) for event in events
-        ]
+        events = page.find(
+            "ul", class_=re.compile("MatchEvents_matchEventsList")
+        ).find_all("li", class_=re.compile("MatchEvents_matchEventsItem"))
+        aux_dict["events_list"] = [self.get_info_from_event(event) for event in events]
 
-        aux_dict["lineup_home"] = self.__get_lineups(page)
-        aux_dict["lineup_away"] = self.__get_lineups(second_lineup)
+        aux_dict["lineup_home"] = self.get_lineups(page)
+        aux_dict["lineup_away"] = self.get_lineups(second_lineup)
 
         return aux_dict
 
-    def __get_lineups(self, page):
+    def get_lineups(self, page):
         lineup = []
-        for player in page.find_all("span", class_="match-lineup-v2__player-name-text"):
+        for player in page.find_all(
+            "span", class_=re.compile("MatchLineupFormation_playerNameText")
+        ):
             player_info = player.text.split(".")
             lineup.append(
                 {
@@ -282,7 +328,7 @@ class OneFootballOperator(BaseOperator):
             )
         return lineup
 
-    def __get_penalties(self, match):
+    def get_penalties(self, match):
         regex_rule = r"\((\d+)\)"
         aux = match.find_all(
             "span", class_="title-7-bold simple-match-card-team__score"
@@ -293,7 +339,7 @@ class OneFootballOperator(BaseOperator):
         ]
         return aux
 
-    def __get_all_matches(self, html_full):
+    def get_all_matches(self, html_full):
         aux_dict = []
         for match in html_full.find_all("a", class_="match-card", href=True):
             aux_dict_2 = {}
@@ -316,7 +362,7 @@ class OneFootballOperator(BaseOperator):
                         ).text
                         == "(Pens)"
                     )
-                    home, away = self.__get_penalties(match)
+                    home, away = self.get_penalties(match)
                     aux_dict_2["pens_home_score"] = home
                     aux_dict_2["pens_away_score"] = away
                 except:
@@ -327,7 +373,7 @@ class OneFootballOperator(BaseOperator):
             aux_dict.append(aux_dict_2)
         return aux_dict
 
-    def __verify_date(self, match):
+    def verify_date(self, match):
         time_const = [" Today ", " Yesterday ", " Tomorrow "]
         try:
             if match["date"] in time_const:
@@ -345,18 +391,18 @@ class OneFootballOperator(BaseOperator):
         except:
             False
 
-    def __extraction(self, url):
+    def extraction(self, url):
         print("Getting all matches from competition at ", url)
-        page = self.__get_html_full(url)
-        matches = self.__get_all_matches(page)
+        page = self.get_html_full(url)
+        matches = self.get_all_matches(page)
 
-        matches = list(filter(self.__verify_date, matches))
+        matches = list(filter(self.verify_date, matches))
         print("Total of", len(matches), "Match(es)")
 
         def merge_information(match, second_try=False):
             try:
-                match_info = self.__get_info_from_match(
-                    *self.__get_html_from_a_match(match["link"])
+                match_info = self.get_info_from_match(
+                    *self.get_html_from_a_match(match["link"])
                 )
             except:
                 print("Error", match["link"])
@@ -392,7 +438,7 @@ class OneFootballOperator(BaseOperator):
         print("Final shape dataset", df.shape)
         return df
 
-    def __transform(self, df):
+    def transform(self, df):
         print("Transforming data")
         df.date = df.date.replace(" Today ", datetime.today().strftime("%d/%m/%Y"))
         df.date = df.date.replace(
@@ -516,7 +562,7 @@ class OneFootballOperator(BaseOperator):
 
         return df, df_events_list
 
-    def __store(self, df_matches, df_event, dataset_name, dataset_folder):
+    def store(self, df_matches, df_event, dataset_name, dataset_folder):
         print("Saving dataset as", dataset_name)
         if not os.path.exists(dataset_folder):
             os.makedirs(dataset_folder)
