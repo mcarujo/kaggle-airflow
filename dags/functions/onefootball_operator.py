@@ -258,19 +258,19 @@ class OneFootballOperator(BaseOperator):
         aux_dict["team_away_score"] = scores[2].text
 
         ## PENS
-        #         try:
-        pens = (
-            page.find("div", class_=re.compile("MatchScore_data"))
-            .find("span", class_="title-7-medium")
-            .text
-        )
-        if "Pens" in pens:
-            aux_dict["pens"] = True
-            pens_aux = pens.split(": ")[1].split(" - ")
-            aux_dict["pens_home_score"] = pens_aux[0]
-            aux_dict["pens_away_score"] = pens_aux[1]
-        #         except:
-        #             pass
+        try:
+            pens = (
+                page.find("div", class_=re.compile("MatchScore_data"))
+                .find("span", class_="title-7-medium")
+                .text
+            )
+            if "Pens" in pens:
+                aux_dict["pens"] = True
+                pens_aux = pens.split(": ")[1].split(" - ")
+                aux_dict["pens_home_score"] = pens_aux[0]
+                aux_dict["pens_away_score"] = pens_aux[1]
+        except:
+            pass
         ## STATISTICS
         try:
             description = page.find_all(
