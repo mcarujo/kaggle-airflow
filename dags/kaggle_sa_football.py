@@ -1,5 +1,5 @@
 """
-DAG for https://www.kaggle.com/datasets/mcarujo/european-football-season-202223
+DAG for https://www.kaggle.com/datasets/mcarujo/south-america-football-season-2023
 """
 import logging
 import os
@@ -26,9 +26,9 @@ default_args = {
 
 
 with DAG(
-    "kaggle_europe_football", schedule_interval=None, default_args=default_args
+    "kaggle_south-america-football", schedule_interval=None, default_args=default_args
 ) as dag:
-    KAGGLE_DATASET = "european-football-season-202223"
+    KAGGLE_DATASET = "south-america-football-season-2023"
     OUTPUT_PATH = os.path.join(Variable.get("ROOT_OUTPUT_PATH"), KAGGLE_DATASET)
     N_JOBS = int(Variable.get("N_JOBS"))
     logging.info("Using OUTPUT_PATH as %s", OUTPUT_PATH)
@@ -45,40 +45,24 @@ with DAG(
 
     competitions = [
         {
-            "competition_link": "https://onefootball.com/en/competition/liga-portugal-35/results",
-            "competition": "liga-portugal_2022-23",
+            "competition_link": "https://onefootball.com/en/competition/primera-division-de-argentina-183/results",
+            "competition": "primera-division-de-argentina-23",
         },
         {
-            "competition_link": "https://onefootball.com/en/competition/laliga-10/results",
-            "competition": "laliga_2022-23",
+            "competition_link": "https://onefootball.com/en/competition/primera-division-82/results",
+            "competition": "primera-division-cl-23",
         },
         {
-            "competition_link": "https://onefootball.com/en/competition/liga-dos-campeoes-5/results",
-            "competition": "champions_league_2022-23",
+            "competition_link": "https://onefootball.com/en/competition/brasileirao-serie-a-16/results",
+            "competition": "brasileirao-serie-a-23",
         },
         {
-            "competition_link": "https://onefootball.com/en/competition/premier-league-9/results",
-            "competition": "premier-league_2022-23",
+            "competition_link": "https://onefootball.com/en/competition/conmebol-sudamericana-102/results",
+            "competition": "conmebol-sudamericana-23",
         },
         {
-            "competition_link": "https://onefootball.com/en/competition/bundesliga-1/results",
-            "competition": "bundesliga_2022-23",
-        },
-        {
-            "competition_link": "https://onefootball.com/en/competition/serie-a-13/results",
-            "competition": "serie_2022-23",
-        },
-        {
-            "competition_link": "https://onefootball.com/en/competition/europa-league-7/results",
-            "competition": "europa-league_2022-23",
-        },
-        {
-            "competition_link": "https://onefootball.com/en/competition/ligue-1-uber-eats-23/results",
-            "competition": "ligue-1_2022-23",
-        },
-        {
-            "competition_link": "https://onefootball.com/en/competition/eredivisie-36/results",
-            "competition": "eredivisie_2022-23",
+            "competition_link": "https://onefootball.com/en/competition/conmebol-libertadores-76/results",
+            "competition": "conmebol-libertadores-23",
         },
     ]
     tasks_onefootball = []
