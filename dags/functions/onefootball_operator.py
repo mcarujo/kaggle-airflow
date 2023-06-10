@@ -6,6 +6,7 @@ import re
 import time
 from datetime import datetime, timedelta
 
+import numpy as np
 import pandas as pd
 from airflow.models import Variable
 from airflow.models.baseoperator import BaseOperator
@@ -104,6 +105,7 @@ class OneFootballOperator(BaseOperator):
             line_values.append(aux_values)
         table = pd.DataFrame(line_values)
         table.columns = ["Team", "Position", "drop", "PL", "W", "D", "L", "GD", "PTS"]
+        table = table.apply(np.vectorize(lambda x: x.strip()))
         table.drop("drop", axis=1, inplace=True)
         return table
 
